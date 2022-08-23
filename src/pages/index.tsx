@@ -19,7 +19,6 @@ const Home: NextPage = () => {
     y: 0,
   });
   const [cursorVariant, setCursorVariant] = useState("default");
-  const { colorMode, toggleColorMode } = useColorMode();
 
   useEffect(() => {
     const mouseMove = (e: any) => {
@@ -38,11 +37,13 @@ const Home: NextPage = () => {
 
   const variants = {
     default: {
+      scale: 1,
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
     },
     options: {
       opacity: 0.5,
+      scale: 1.5,
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
     },
@@ -69,9 +70,6 @@ const Home: NextPage = () => {
       />
 
       <header className={styles.containerHeader}>
-        <Button onClick={toggleColorMode}>
-          Toggle {colorMode === "light" ? "Dark" : "Light"}
-        </Button>
         <div className={styles.optionsMenuContainer}>
           <ChakraDiv
             animate={{
@@ -119,7 +117,10 @@ const Home: NextPage = () => {
         <section className={styles.containerSectionTitles}>
           <Particle />
           <div className={styles.containerTitle}>
-            <ChakraDiv className={styles.title} animate={{}}>
+            <ChakraDiv
+              className={styles.title}
+              scrollMarginY={{ opacity: 0.5 }}
+            >
               Junior Sousa
             </ChakraDiv>
             <Text className={styles.subtitle}>Desenvolvedor</Text>
