@@ -1,0 +1,45 @@
+.BoxContainer {
+    margin-top: 2rem;
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
+    margin-bottom: 20px;
+
+    width: 200px;
+    height: 200px;
+
+    @media (max-width: 768px) {
+        width: 250px;
+        height: 250px;
+    }
+
+    border: 2px solid #8257e5;
+}
+
+.BoxContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #1a202c;
+    height: 100%;
+}
+
+.MainStack {
+    color: #8257e5;
+    display: flex;
+    grid-gap: 5px;
+    align-items: center;
+    font-weight: 600;
+    position: absolute;
+    text-transform: uppercase;
+    top: -25px;
+    left: -2px;
+}
+
+.iconStack {
+    font-size: 120px;
+
+    @media (max-width: 768px) {
+        font-size: 160px;
+    }
+}
