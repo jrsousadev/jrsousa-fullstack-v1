@@ -1,8 +1,7 @@
-.BoxContainer {
+.BoxContainerMainStack {
     margin-top: 2rem;
     font-family: 'Work Sans', sans-serif;
     position: relative;
-    margin-bottom: 20px;
 
     width: 200px;
     height: 200px;
@@ -13,6 +12,22 @@
     }
 
     border: 2px solid #8257e5;
+}
+
+.BoxContainerNoMainStack {
+    margin-top: 2rem;
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+
+    @media (max-width: 768px) {
+        width: 250px;
+        height: 250px;
+    }
+
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.090);
 }
 
 .BoxContent {

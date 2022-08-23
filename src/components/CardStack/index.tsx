@@ -53,7 +53,13 @@ export const CardStack = ({ isMainStack, stack }: CardStackProps) => {
       whileInView={{ opacity: 1 }}
       transition={"all 0.5s"}
     >
-      <Box className={styles.BoxContainer}>
+      <Box
+        className={
+          isMainStack
+            ? styles.BoxContainerMainStack
+            : styles.BoxContainerNoMainStack
+        }
+      >
         {isMainStack && (
           <Text className={styles.MainStack}>
             <BiStar size={17} /> Main Stack
