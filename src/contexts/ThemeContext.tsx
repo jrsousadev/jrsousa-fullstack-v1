@@ -1,8 +1,7 @@
+import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { ChakraProvider, ThemeConfig } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
 
-interface IThemeContext {
+interface ThemeContextProviderProps {
   children: ReactNode;
 }
 
@@ -13,6 +12,8 @@ const config: ThemeConfig = {
 
 export const theme = extendTheme({ config });
 
-export const ThemeContextProvider = ({ children }: IThemeContext) => {
+export const ThemeContextProvider = ({
+  children,
+}: ThemeContextProviderProps) => {
   return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 };
