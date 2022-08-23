@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
-import { Button, chakra, Text, useColorMode } from "@chakra-ui/react";
+import { chakra, Text } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import { Particle } from "../components/Particle";
 
 const ChakraText = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
 
       <main>
         <section className={styles.containerSectionOne}>
+          <Particle />
           <div className={styles.containerTitle}>
             <ChakraText className={styles.title} animate={{}}>
               Junior Sousa

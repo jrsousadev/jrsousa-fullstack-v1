@@ -4,10 +4,9 @@
     justify-content: end;
     width: 100%;
     align-items: center;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     padding-right: 1.4rem;
     padding-left: 1.4rem;
-    margin-bottom: -2rem;
 
     .optionsMenuContainer{
         display: flex;
@@ -17,7 +16,7 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             font-weight: 600;
-            height: 20px;
+            height: 22px;
             cursor: pointer;
             
             display: inline-block;
@@ -34,6 +33,7 @@
     font-family: 'Work Sans', sans-serif;
     height: 90vh;
     padding: 1rem;
+    position: relative;
 
     .containerTitle {
         display: flex;
