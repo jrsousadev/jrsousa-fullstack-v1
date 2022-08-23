@@ -9,4 +9,6 @@ export const myStacksBack = [
   { name: "node", isMainStack: true },
   { name: "mongo", isMainStack: true },
   { name: "typescript", isMainStack: true },
+  { name: "postgress", isMainStack: false },
+  { name: "mysql", isMainStack: false },
 ];
