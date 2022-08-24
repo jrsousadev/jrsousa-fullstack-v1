@@ -46,7 +46,7 @@ export const myJobs = [
     description: `Sistema de clínica (REAL), desenvolvido com o objetivo de cadastrar
     pacientes, criar matrículas e ter o controle dos vencimentos de pagamento, além de
     ter os dados dos pacientes e quais são suas matrículas, sistema com autênticação e
-    dados relacional NoSQL (MongoDB)`,
+    dados (MongoDB)`,
   },
   {
     name: "Challenge Suflex Full-stack",
