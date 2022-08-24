@@ -36,11 +36,11 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: #F0F0F0;        /* color of the tracking area */
+    background: transparent;        /* color of the tracking area */
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #696969;    /* color of the scroll thumb */
+    background-color: #8257e5;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #F0F0F0;  /* creates padding around scroll thumb */
+    border: 3px solid #ffffff;  /* creates padding around scroll thumb */
   }
