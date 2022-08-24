@@ -57,6 +57,7 @@
 
     .containerTitle {
         position: fixed;
+        z-index: -1;
         display: flex;
         flex-direction: column;
         grid-gap: 10px;
@@ -106,7 +107,7 @@
 
 .containerSectionStacks {
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 20rem;
 
     display: flex;
     flex-direction: column;
@@ -146,3 +147,28 @@
 }
 
 
+.containerSectionJobs {
+    width: 100%;
+    padding: 2rem;
+
+    .gridJobs {
+        display: grid;
+        grid-gap: 15px;
+        
+        grid-template-columns: repeat(3, 1fr);    
+        place-items: center;
+
+        @media (max-width: 1300px){
+            grid-template-columns: repeat(2, 1fr);    
+        }
+
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media (max-width: 768px){
+        justify-content: center;
+    }
+}

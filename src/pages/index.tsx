@@ -1,13 +1,16 @@
 import type { NextPage } from "next";
-import { Button, chakra, Text, useColorMode } from "@chakra-ui/react";
+import { chakra, Text } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { Particle } from "../components/Particle";
 import { useEffect, useState } from "react";
+import { CardStack } from "../components/CardStack";
+import { myStacksBack, myStacksFront } from "../constants/ListMyStacks";
+import { CardJob } from "../components/CardJob";
+import { myJobs } from "../constants/ListMyJobs";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import { CardStack } from "../components/CardStack";
-import { myStacksBack, myStacksFront } from "../constants/ListMyStacks";
+import Router from "next/router";
 
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
@@ -47,6 +50,13 @@ const Home: NextPage = () => {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
     },
+    enterJob: {
+      opacity: 0.5,
+      scale: 2,
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: "#000",
+    },
   };
 
   const enterMouseOptions = () => {
@@ -80,6 +90,7 @@ const Home: NextPage = () => {
               className={styles.textMenu}
               onMouseEnter={enterMouseOptions}
               onMouseLeave={leaveMouseOptions}
+              onClick={() => Router.push("#stacks")}
             >
               Stacks
             </i>
@@ -93,8 +104,9 @@ const Home: NextPage = () => {
               className={styles.textMenu}
               onMouseEnter={enterMouseOptions}
               onMouseLeave={leaveMouseOptions}
+              onClick={() => Router.push("#jobs")}
             >
-              Porfólio
+              Meus Jobs
             </i>
           </ChakraDiv>
           <ChakraDiv
@@ -132,7 +144,7 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className={styles.containerSectionStacks}>
+        <section className={styles.containerSectionStacks} id="stacks">
           <Text className={styles.title}>Front</Text>
 
           <div className={styles.gridStacks}>
@@ -152,6 +164,23 @@ const Home: NextPage = () => {
               <CardStack
                 isMainStack={stack.isMainStack}
                 stack={stack.name}
+                key={index}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.containerSectionJobs} id="jobs">
+          <div className={styles.gridJobs}>
+            {myJobs.map((job, index) => (
+              <CardJob
+                stacks={job.stacks ?? [""]}
+                name={job.name ?? ""}
+                image={job.image ?? ""}
+                description={job.description ?? ""}
+                link={job.link ?? ""}
+                github={job.github ?? ""}
+                setCursorVariant={setCursorVariant}
                 key={index}
               />
             ))}
