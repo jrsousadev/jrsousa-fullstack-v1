@@ -8,8 +8,7 @@ class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="icon" href="/favicon.ico" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
