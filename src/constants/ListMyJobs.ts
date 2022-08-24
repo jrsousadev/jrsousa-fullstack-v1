@@ -30,7 +30,7 @@ export const myJobs = [
   {
     name: "Customer Control",
     stacks: ["Next", "Node", "Typescript", "Css-In-Js", "MongoDB"],
-    link: "https://www.unitok.com/conarh2022",
+    link: "https://customer-control-web.herokuapp.com/",
     github: "https://github.com/jrsousadev/Customer_Control_web",
     image: "https://i.imgur.com/STLes2R.png",
     description: `Projeto desenvolvido por mim, criado com o intuito de 
@@ -51,7 +51,7 @@ export const myJobs = [
   {
     name: "Challenge Suflex Full-stack",
     stacks: ["Next", "Node", "Typescript", "Css-In-Js", "Postgress"],
-    link: "https://www.unitok.com/conarh2022",
+    link: "https://challenge-surflex-front.herokuapp.com/",
     github: "https://github.com/jrsousadev/challenge-surflex-front",
     image: "https://i.imgur.com/ZbERIMZ.png",
     description: `Challenge Full-stack nível pleno, neste projeto é possível
