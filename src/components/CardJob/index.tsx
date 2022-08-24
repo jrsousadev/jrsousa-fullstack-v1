@@ -32,7 +32,10 @@ export const CardJob = ({
   const [showInfos, setShowInfos] = useState<boolean>(false);
 
   return (
-    <Box
+    <ChakraDiv
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={"all 0.5s"}
       className={styles.containerBoxMain}
       onMouseEnter={() => {
         setShowInfos(true);
@@ -110,6 +113,6 @@ export const CardJob = ({
           <p className={styles.contentParagraph}>{description}</p>
         </div>
       </Box>
-    </Box>
+    </ChakraDiv>
   );
 };
