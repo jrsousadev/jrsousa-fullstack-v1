@@ -36,82 +36,86 @@ export const CardJob = ({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={"all 0.5s"}
-      className={styles.containerBoxMain}
-      onMouseEnter={() => {
-        setShowInfos(true);
-        setCursorVariant("enterJob");
-      }}
-      onMouseLeave={() => {
-        setShowInfos(false);
-        setCursorVariant("default");
-      }}
+      className={styles.containerBoxMainAnimatted}
     >
-      <Image
-        src={image}
-        alt={`Imagem do projeto ${name}`}
-        className={styles.image}
-      />
+      <Box
+        onMouseEnter={() => {
+          setShowInfos(true);
+          setCursorVariant("enterJob");
+        }}
+        onMouseLeave={() => {
+          setShowInfos(false);
+          setCursorVariant("default");
+        }}
+        className={styles.containerBoxMain}
+      >
+        <Image
+          src={image}
+          alt={`Imagem do projeto ${name}`}
+          className={styles.image}
+        />
 
-      <Box className={styles.containerInfos}>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-          className={styles.infosTitle}
-        >
-          {name}
-        </Box>
+        <Box className={styles.containerInfos}>
+          <Box
+            mt="1"
+            fontWeight="semibold"
+            as="h4"
+            lineHeight="tight"
+            noOfLines={1}
+            className={styles.infosTitle}
+          >
+            {name}
+          </Box>
 
-        <Box className={styles.containerStacks}>
-          {stacks.map((stack, index) => (
-            <Text className={styles.stacksText} key={index}>
-              {stack}
-            </Text>
-          ))}
-        </Box>
+          <Box className={styles.containerStacks}>
+            {stacks.map((stack, index) => (
+              <Text className={styles.stacksText} key={index}>
+                {stack}
+              </Text>
+            ))}
+          </Box>
 
-        <Box className={styles.containerButtons}>
-          {github && (
-            <Button className={styles.buttonGithub}>
-              <a href={github} target="_blank">
-                Github
-                <BsArrowUpRight
+          <Box className={styles.containerButtons}>
+            {github && (
+              <Button className={styles.buttonGithub}>
+                <a href={github} target="_blank">
+                  Github
+                  <BsArrowUpRight
+                    style={{
+                      color: showInfos ? "#0e0e0ff1" : "#8257e5",
+                      marginLeft: "7px",
+                    }}
+                  />
+                </a>
+              </Button>
+            )}
+            <Button className={styles.buttonShow}>
+              <a href={link} target="_blank">
+                Ver mais
+                <IoIosAdd
+                  className={styles.iconShowMore}
                   style={{
                     color: showInfos ? "#0e0e0ff1" : "#8257e5",
-                    marginLeft: "7px",
                   }}
                 />
               </a>
             </Button>
-          )}
-          <Button className={styles.buttonShow}>
-            <a href={link} target="_blank">
-              Ver mais
-              <IoIosAdd
-                className={styles.iconShowMore}
-                style={{
-                  color: showInfos ? "#0e0e0ff1" : "#8257e5",
-                }}
-              />
-            </a>
-          </Button>
+          </Box>
         </Box>
-      </Box>
 
-      <Box
-        className={styles.containerShowInfos}
-        style={{
-          visibility: showInfos ? "visible" : "hidden",
-          opacity: showInfos ? 1 : 0,
-        }}
-      >
-        <div className={styles.content}>
-          <div className={styles.contentTitle}>{name}</div>
+        <Box
+          className={styles.containerShowInfos}
+          style={{
+            visibility: showInfos ? "visible" : "hidden",
+            opacity: showInfos ? 1 : 0,
+          }}
+        >
+          <div className={styles.content}>
+            <div className={styles.contentTitle}>{name}</div>
 
-          <p className={styles.contentParagraph}>{description}</p>
-        </div>
+            <p className={styles.contentParagraph}>{description}</p>
+          </div>
+        </Box>
       </Box>
     </ChakraDiv>
   );
