@@ -11,6 +11,7 @@ import { myJobs } from "../constants/ListMyJobs";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Router from "next/router";
+import Link from "next/link";
 
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
@@ -107,6 +108,25 @@ const Home: NextPage = () => {
               onClick={() => Router.push("#jobs")}
             >
               Meus Jobs
+            </i>
+          </ChakraDiv>
+          <ChakraDiv
+            animate={{
+              scale: [2, 1],
+            }}
+          >
+            <i
+              className={styles.textMenu}
+              onMouseEnter={enterMouseOptions}
+              onMouseLeave={leaveMouseOptions}
+            >
+              <a              
+                href="/files/juniorsousa-curriculo.pdf"
+                target="_blank"
+                download
+              >
+               Currículo
+              </a>
             </i>
           </ChakraDiv>
           <ChakraDiv

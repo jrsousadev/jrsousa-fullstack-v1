@@ -26,7 +26,11 @@
 
     .optionsMenuContainer{
         display: flex;
-        grid-gap: 10px;
+        grid-gap: 25px;
+
+        @media (max-width: 450px) { 
+            grid-gap: 15px;
+        }
     
         .textMenu {
             font-size: 0.8rem;
@@ -36,6 +40,10 @@
             
             display: inline-block;
             transition: all 0.2s;
+
+            a {
+                cursor: none;
+            }
 
             &:hover{
                 border-bottom: 2px solid #8257e5;
