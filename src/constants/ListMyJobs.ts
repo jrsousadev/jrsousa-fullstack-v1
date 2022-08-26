@@ -61,7 +61,7 @@ export const myJobs = [
   },
   {
     name: "Full Calendar Scheduler",
-    stacks: ["Next", "Typescript", "Css-In-Js"],
+    stacks: ["Next", "Typescript", "Css-In-Js", "MongoDB"],
     link: "https://fullcalendar-scheduler-web.vercel.app/",
     github: "https://github.com/jrsousadev/fullcalendar-scheduler-web",
     image: "https://i.imgur.com/SMEDvdc.png",
