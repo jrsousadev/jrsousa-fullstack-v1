@@ -13,7 +13,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Router from "next/router";
 
-
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
 });
@@ -157,12 +156,12 @@ const Home: NextPage = () => {
             animate={{
               scale: [2, 1],
             }}
-            onClick={() => Router.push("#contacts")}
           >
             <i
               className={styles.textMenu}
               onMouseEnter={enterMouseOptions}
               onMouseLeave={leaveMouseOptions}
+              onClick={() => Router.push("#contacts")}
             >
               Contato
             </i>
