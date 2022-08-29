@@ -11,7 +11,7 @@ import { myJobs } from "../constants/ListMyJobs";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Router from "next/router";
-import Link from "next/link";
+import { myContacts } from "../constants/ListMyContacts";
 
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
@@ -23,6 +23,29 @@ const Home: NextPage = () => {
     y: 0,
   });
   const [cursorVariant, setCursorVariant] = useState("default");
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [opacityTitle, setOpacityTitle] = useState<number>(1);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    if (scrollPosition >= 4300) {
+      setOpacityTitle(0);
+    } else {
+      setOpacityTitle(1);
+    }
+  }, [scrollPosition]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const mouseMove = (e: any) => {
@@ -120,12 +143,12 @@ const Home: NextPage = () => {
               onMouseEnter={enterMouseOptions}
               onMouseLeave={leaveMouseOptions}
             >
-              <a              
+              <a
                 href="/files/juniorsousa-curriculo.pdf"
                 target="_blank"
                 download
               >
-               Currículo
+                Currículo
               </a>
             </i>
           </ChakraDiv>
@@ -133,6 +156,7 @@ const Home: NextPage = () => {
             animate={{
               scale: [2, 1],
             }}
+            onClick={() => Router.push("#contacts")}
           >
             <i
               className={styles.textMenu}
@@ -148,7 +172,7 @@ const Home: NextPage = () => {
       <main>
         <section className={styles.containerSectionTitles}>
           <Particle />
-          <div className={styles.containerTitle}>
+          <div className={styles.containerTitle} style={{opacity: opacityTitle}}>
             <ChakraDiv
               className={styles.title}
               scrollMarginY={{ opacity: 0.5 }}
@@ -204,6 +228,30 @@ const Home: NextPage = () => {
                 key={index}
               />
             ))}
+          </div>
+        </section>
+
+        <section className={styles.containerSectionContacts} id="contacts">
+          <h4 className={styles.title}>
+            Gostaria de entrar em contato comigo ?
+          </h4>
+          <p className={styles.email}>contato.jaimejunior@gmail.com</p>
+          <div className={styles.gridContacts}>
+            {myContacts.map((contact, index) => {
+              if (!contact.disabled) {
+                return (
+                  <div
+                    className={styles.icon}
+                    key={index}
+                    onMouseEnter={enterMouseOptions}
+                    onMouseLeave={leaveMouseOptions}
+                    onClick={() => window.open(`${contact.url}`, "_blank")}
+                  >
+                    {<contact.icon size={18} style={{ color: "#8257e5" }} />}
+                  </div>
+                );
+              }
+            })}
           </div>
         </section>
       </main>
