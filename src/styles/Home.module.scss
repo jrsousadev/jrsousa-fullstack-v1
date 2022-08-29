@@ -72,7 +72,7 @@
         justify-content: end;
         height: 96%;
         margin-top: auto;
-
+        transition: all 0.5s;
 
         @media (max-width: 768px) {
             height: 100%;
@@ -179,5 +179,50 @@
 
     @media (max-width: 768px){
         justify-content: center;
+    }
+}
+
+.containerSectionContacts{
+    width: 100%;
+    padding: 0 1rem;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .email {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #8257e5;
+    }
+
+    .gridContacts {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+    }
+
+    .icon {
+        border: 2px solid #8257e5;
+        padding: 0.7rem;
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
