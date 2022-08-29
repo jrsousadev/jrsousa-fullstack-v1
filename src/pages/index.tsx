@@ -7,11 +7,12 @@ import { CardStack } from "../components/CardStack";
 import { myStacksBack, myStacksFront } from "../constants/ListMyStacks";
 import { CardJob } from "../components/CardJob";
 import { myJobs } from "../constants/ListMyJobs";
+import { myContacts } from "../constants/ListMyContacts";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Router from "next/router";
-import { myContacts } from "../constants/ListMyContacts";
+
 
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
