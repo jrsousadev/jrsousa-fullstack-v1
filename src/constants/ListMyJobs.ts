@@ -4,7 +4,7 @@ export const myJobs = [
     stacks: ["Next", "Node", "Typescript", "Aws", "Css-In-Js", "MongoDB"],
     link: "https://www.unitok.com/",
     github: "",
-    image: "https://i.imgur.com/cT57xDu.png",
+    image: "https://i.imgur.com/ta6tDNH.png",
     description: ` Responsável pela plataforma de produtos digitais Unitok. Minhas
     principais funções: apresentar e desenvolver soluções para novas
     funcionalidades, manter um padrão de desenvolvimento escalável,
@@ -18,7 +18,7 @@ export const myJobs = [
     stacks: ["Next", "Node", "Typescript", "Aws", "Css-In-Js", "MongoDB"],
     link: "https://www.unitok.com/conarh2022",
     github: "",
-    image: "https://i.imgur.com/y2B9dD7.png",
+    image: "https://i.imgur.com/hBM6uOu.png",
     description: ` Responsável pela plataforma de controle de mailing dos expositores
      do evento CONARH2022 organizado pela ABRH BRASIL. Minhas principais 
      funções: participar da concepção da solução, discutindo fluxos e
@@ -32,7 +32,7 @@ export const myJobs = [
     stacks: ["Next", "Node", "Typescript", "Css-In-Js", "MongoDB"],
     link: "https://customer-control-web.herokuapp.com/",
     github: "https://github.com/jrsousadev/Customer_Control_web",
-    image: "https://i.imgur.com/STLes2R.png",
+    image: "https://i.imgur.com/cD8Wj93.png",
     description: `Projeto desenvolvido por mim, criado com o intuito de 
     resolver problemas/dificuldades de amigos de trabalho (e até minha mesmo) 
     com controle de seus clientes e datas de pagamentos.`,
@@ -42,7 +42,7 @@ export const myJobs = [
     stacks: ["Next", "Node", "Typescript", "Css-In-Js", "MongoDB"],
     link: "http://clinicaapitfhisio.com.br/professor/login",
     github: "https://github.com/jrsousadev/Apit_Fhisio_web",
-    image: "https://i.imgur.com/8NrdBhc.png",
+    image: "https://i.imgur.com/Lw7Ko0h.png",
     description: `Sistema de clínica (REAL), desenvolvido com o objetivo de cadastrar
     pacientes, criar matrículas e ter o controle dos vencimentos de pagamento, além de
     ter os dados dos pacientes e quais são suas matrículas, sistema com autênticação e
@@ -53,7 +53,7 @@ export const myJobs = [
     stacks: ["Next", "Node", "Typescript", "Css-In-Js", "Postgress"],
     link: "https://challenge-surflex-front.herokuapp.com/",
     github: "https://github.com/jrsousadev/challenge-surflex-front",
-    image: "https://i.imgur.com/ZbERIMZ.png",
+    image: "https://i.imgur.com/9CO08UU.png",
     description: `Challenge Full-stack nível pleno, neste projeto é possível
     realizar um registro/autênticação de usuário, filtrar personagens, e criar 
     própria lista de personagens favoritos (salvando em banco de dados) , 
@@ -64,7 +64,7 @@ export const myJobs = [
     stacks: ["Next", "Typescript", "Css-In-Js", "MongoDB"],
     link: "https://fullcalendar-scheduler-web.vercel.app/",
     github: "https://github.com/jrsousadev/fullcalendar-scheduler-web",
-    image: "https://i.imgur.com/SMEDvdc.png",
+    image: "https://i.imgur.com/f2RukgD.png",
     description: `Projeto open source inspirado no Google Agenda, o mesmo foi criado
     com o intuito de ajudar pessoas que necessitem das funcionalidades prontas de listar/criar/atualizar/delete
     eventos tanto no front-end quanto integrado ao back-end. (Open Source)`
