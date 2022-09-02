@@ -8,6 +8,7 @@ class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="description" content="Profissional de T.I focado em desenvolvimento Web, entrego soluções com sites e aplicações utilizando React e Node." />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
