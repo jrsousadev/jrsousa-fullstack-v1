@@ -11,7 +11,6 @@ class MyDocument extends Document {
           <meta name="description" content="Especialista em desenvolvimento Web, entrego soluções em forma de códigos utilizando React, Node e outras tecnologias." />
           <meta name="keywords" content="HTML, CSS, JavaScript, Fullstack, Front-end, Back-end, Desenvolvedor Web" />
           <meta name="author" content="Junior Sousa" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
