@@ -28,6 +28,24 @@ export const myJobs = [
       equipe de desenvolvimento.`,
   },
   {
+    name: "Full Calendar Scheduler",
+    stacks: ["Next", "Typescript", "Css-In-Js", "MongoDB"],
+    link: "https://fullcalendar-scheduler-web.vercel.app/",
+    github: "https://github.com/jrsousadev/fullcalendar-scheduler-web",
+    image: "https://i.imgur.com/f2RukgD.png",
+    description: `Projeto open source inspirado no Google Agenda, o mesmo foi criado
+    com o intuito de ajudar pessoas que necessitem das funcionalidades prontas de listar/criar/atualizar/delete
+    eventos tanto no front-end quanto integrado ao back-end. (Open Source)`
+  },
+  {
+    name: "DR. Felipe Farah",
+    stacks: ["React", "Typescript", "Css-In-Js", "Front-end"],
+    link: "https://drfelipefarah.com.br",
+    image: "https://i.imgur.com/rUQylyr.png",
+    description: `(Freelance) Landing Page, na mesma é exibido uma biografia sobre o profissional, quais foram seus feitos, 
+    resultados e também seus cursos ao vivo juntamente com seus alunos.`,
+  },
+  {
     name: "Customer Control",
     stacks: ["Next", "Node", "Typescript", "Css-In-Js", "MongoDB"],
     link: "https://customer-control-web.herokuapp.com/",
@@ -59,14 +77,4 @@ export const myJobs = [
     própria lista de personagens favoritos (salvando em banco de dados) , 
     consumindo API visando a performance do projeto e a experiência do usuário.`,
   },
-  {
-    name: "Full Calendar Scheduler",
-    stacks: ["Next", "Typescript", "Css-In-Js", "MongoDB"],
-    link: "https://fullcalendar-scheduler-web.vercel.app/",
-    github: "https://github.com/jrsousadev/fullcalendar-scheduler-web",
-    image: "https://i.imgur.com/f2RukgD.png",
-    description: `Projeto open source inspirado no Google Agenda, o mesmo foi criado
-    com o intuito de ajudar pessoas que necessitem das funcionalidades prontas de listar/criar/atualizar/delete
-    eventos tanto no front-end quanto integrado ao back-end. (Open Source)`
-  }
 ];
