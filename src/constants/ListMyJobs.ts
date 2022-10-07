@@ -1,5 +1,18 @@
 export const myJobs = [
   {
+    name: "Be Well",
+    stacks: ["React", "Node", "Javascript", "AWS", "Css-In-Js", "MysQL"],
+    link: "http://usobewell.com/",
+    github: "",
+    image: "https://i.imgur.com/wSTx1s2.png",
+    description: `
+      Responsável pelo Sistema "Processo Hospitalar" Be Well. Minhas principais funções:
+      Desenvolvimento de novas features, correção de bugs e erros de lógica, construir arquitetura
+      de Front-end/Back-end de acordo com novas funcionalidades e necessidades, manter um padrão
+      de desenvolvimento escalável e auxiliar a atuação de novos desenvolvedores na equipe.
+    `,
+  },
+  {
     name: "Unitok",
     stacks: ["Next", "Node", "Typescript", "Aws", "Css-In-Js", "MongoDB"],
     link: "https://www.unitok.com/",
