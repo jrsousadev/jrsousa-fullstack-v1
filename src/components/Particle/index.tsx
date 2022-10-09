@@ -1,9 +1,9 @@
-import { useCallback } from "react";
+import { memo, useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import styles from "./Particle.module.scss";
 
-export const Particle = () => {
+const Particle = () => {
   const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);
   }, []);
@@ -61,3 +61,5 @@ export const Particle = () => {
     />
   );
 };
+
+export default memo(Particle)

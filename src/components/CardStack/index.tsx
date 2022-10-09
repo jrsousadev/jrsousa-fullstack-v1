@@ -1,5 +1,5 @@
 import { Box, chakra, Text } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { memo } from "react";
 import { BiStar } from "react-icons/bi";
 import { GrMysql, GrReactjs } from "react-icons/gr";
 import {
@@ -23,9 +23,7 @@ const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
 });
 
-export const CardStack = ({ isMainStack, stack }: CardStackProps) => {
-  useEffect(() => {}, []);
-
+const CardStack = ({ isMainStack, stack }: CardStackProps) => {
   const returnStack = () => {
     switch (stack) {
       case "react":
@@ -70,3 +68,5 @@ export const CardStack = ({ isMainStack, stack }: CardStackProps) => {
     </ChakraDiv>
   );
 };
+
+export default memo(CardStack)

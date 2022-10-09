@@ -1,6 +1,6 @@
 import { Box, chakra, Text, Image, Button } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoIosAdd } from "react-icons/io";
 
@@ -20,7 +20,7 @@ const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
 });
 
-export const CardJob = ({
+const CardJob = ({
   description,
   name,
   link,
@@ -31,6 +31,16 @@ export const CardJob = ({
 }: CardJobProps) => {
   const [showInfos, setShowInfos] = useState<boolean>(false);
 
+  const handleOnMouseEnter = () => {
+    setShowInfos(true);
+    setCursorVariant("enterJob");
+  }
+
+  const handleOnMouseLeave = () => {
+    setShowInfos(false);
+    setCursorVariant("default");
+  }
+
   return (
     <ChakraDiv
       initial={{ opacity: 0 }}
@@ -39,14 +49,8 @@ export const CardJob = ({
       className={styles.containerBoxMainAnimatted}
     >
       <Box
-        onMouseEnter={() => {
-          setShowInfos(true);
-          setCursorVariant("enterJob");
-        }}
-        onMouseLeave={() => {
-          setShowInfos(false);
-          setCursorVariant("default");
-        }}
+        onMouseEnter={handleOnMouseEnter}
+        onMouseLeave={handleOnMouseLeave}
         className={styles.containerBoxMain}
       >
         <Image
@@ -120,3 +124,5 @@ export const CardJob = ({
     </ChakraDiv>
   );
 };
+
+export default memo(CardJob);

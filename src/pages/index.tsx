@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import { chakra, Text } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
-import { Particle } from "../components/Particle";
 import { useEffect, useState } from "react";
-import { CardStack } from "../components/CardStack";
 import { myStacksBack, myStacksFront } from "../constants/ListMyStacks";
-import { CardJob } from "../components/CardJob";
 import { myJobs } from "../constants/ListMyJobs";
 import { myContacts } from "../constants/ListMyContacts";
+
+import Particle from "../components/Particle";
+import CardJob from "../components/CardJob";
+import CardStack from "../components/CardStack";
 
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
