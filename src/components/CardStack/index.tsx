@@ -1,7 +1,7 @@
 import { Box, chakra, Text } from "@chakra-ui/react";
 import { memo } from "react";
 import { BiStar } from "react-icons/bi";
-import { GrMysql, GrReactjs } from "react-icons/gr";
+import { GrDocker, GrMysql, GrReactjs } from "react-icons/gr";
 import {
   SiJavascript,
   SiMongodb,
@@ -9,10 +9,12 @@ import {
   SiPostgresql,
   SiTypescript,
 } from "react-icons/si";
-import { IoLogoNodejs } from "react-icons/io";
+import { TiHtml5 } from "react-icons/ti";
+import { IoLogoCss3, IoLogoNodejs } from "react-icons/io";
 import { isValidMotionProp, motion } from "framer-motion";
 
 import styles from "./CardStack.module.scss";
+import { FaAws } from "react-icons/fa";
 
 type CardStackProps = {
   stack: string;
@@ -42,6 +44,14 @@ const CardStack = ({ isMainStack, stack }: CardStackProps) => {
         return <GrMysql className={styles.iconStack} />;
       case "javascript":
         return <SiJavascript className={styles.iconStack} />;
+      case "html":
+        return <TiHtml5 className={styles.iconStack} />;
+      case "css":
+        return <IoLogoCss3 className={styles.iconStack} />;
+      case "docker":
+        return <GrDocker className={styles.iconStack} />;
+      case "aws":
+        return <FaAws className={styles.iconStack} />;
     }
   };
 
@@ -69,4 +79,4 @@ const CardStack = ({ isMainStack, stack }: CardStackProps) => {
   );
 };
 
-export default memo(CardStack)
+export default memo(CardStack);
