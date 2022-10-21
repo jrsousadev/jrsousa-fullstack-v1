@@ -95,7 +95,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Jr. Sousa | FULL-STACK</title>
+        <title>Full Stack Engineer · Junior Sousa</title>
       </Head>
 
       <motion.div
