@@ -3,6 +3,8 @@ export const myStacksFront = [
   { name: "next", isMainStack: true },
   { name: "typescript", isMainStack: true },
   { name: "javascript", isMainStack: false },
+  { name: "html", isMainStack: false },
+  { name: "css", isMainStack: false },
 ];
 
 export const myStacksBack = [
@@ -11,4 +13,6 @@ export const myStacksBack = [
   { name: "typescript", isMainStack: true },
   { name: "postgress", isMainStack: false },
   { name: "mysql", isMainStack: false },
+  { name: "docker", isMainStack: false },
+  { name: "aws", isMainStack: false },
 ];
