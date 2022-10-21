@@ -1,6 +1,6 @@
 export const myJobs = [
   {
-    name: "Be Well",
+    name: "Be Well (atual)",
     stacks: ["React", "Node", "Javascript", "AWS", "Css-In-Js", "MysQL"],
     link: "http://usobewell.com/",
     github: "",
@@ -12,6 +12,18 @@ export const myJobs = [
       de desenvolvimento escalável e auxiliar a atuação de novos desenvolvedores na equipe.
     `,
   },
+/*   {
+    name: "Native Pay (Sócio)",
+    stacks: ["Node", "Typescript", "Swagger", "Next", "Solid", "MongoDB"],
+    github: "https://github.com/jrsousadev/api-pagarme-nodejs",
+    image:
+      "https://partnernetwork.vtexassets.com/arquivos/ids/155570/logo_pagarme.png?v=637599700153200000",
+    description: `
+      Responsável pela criação do checkout (Front/Back) implementando metódo de pagamento via PagarMe, minhas funções 
+      é manter o código legível com o conceito clean code/solid além de está desenvolvendo novas features e prezando também 
+      a segurança do checkout anti-furtos.
+    `,
+  }, */
   {
     name: "Unitok",
     stacks: ["Next", "Node", "Typescript", "Aws", "Css-In-Js", "MongoDB"],
@@ -41,6 +53,26 @@ export const myJobs = [
       equipe de desenvolvimento.`,
   },
   {
+    name: "DR. Felipe Farah",
+    stacks: ["React", "Typescript", "Css-In-Js", "Front-end"],
+    link: "https://drfelipefarah.com.br",
+    image: "https://i.imgur.com/rUQylyr.png",
+    description: `(Freelance) Landing Page, na mesma é exibido uma biografia sobre o profissional, quais foram seus feitos, 
+    resultados e também seus cursos ao vivo juntamente com seus alunos.`,
+  },
+  {
+    name: "API PagarMe NodeJS",
+    stacks: ["Node", "Typescript", "Swagger", "PagarMe", "Solid", "MongoDB"],
+    github: "https://github.com/jrsousadev/api-pagarme-nodejs",
+    image:
+      "https://partnernetwork.vtexassets.com/arquivos/ids/155570/logo_pagarme.png?v=637599700153200000",
+    description: `
+      Projeto open source, desenvolvido com o intuito de ajudar desenvolvedores
+      com a implementação da API do PagarMe (Pagamentos e transações) com Typescript no NodeJS e 
+      utilizando o banco de dados MongoDB. 
+    `,
+  },
+  {
     name: "Full Calendar Scheduler",
     stacks: ["Next", "Typescript", "Css-In-Js", "MongoDB"],
     link: "https://fullcalendar-scheduler-web.vercel.app/",
@@ -48,15 +80,7 @@ export const myJobs = [
     image: "https://i.imgur.com/f2RukgD.png",
     description: `Projeto open source inspirado no Google Agenda, o mesmo foi criado
     com o intuito de ajudar pessoas que necessitem das funcionalidades prontas de listar/criar/atualizar/delete
-    eventos tanto no front-end quanto integrado ao back-end. (Open Source)`
-  },
-  {
-    name: "DR. Felipe Farah",
-    stacks: ["React", "Typescript", "Css-In-Js", "Front-end"],
-    link: "https://drfelipefarah.com.br",
-    image: "https://i.imgur.com/rUQylyr.png",
-    description: `(Freelance) Landing Page, na mesma é exibido uma biografia sobre o profissional, quais foram seus feitos, 
-    resultados e também seus cursos ao vivo juntamente com seus alunos.`,
+    eventos tanto no front-end quanto integrado ao back-end. (Open Source)`,
   },
   {
     name: "Customer Control",
@@ -78,16 +102,5 @@ export const myJobs = [
     pacientes, criar matrículas e ter o controle dos vencimentos de pagamento, além de
     ter os dados dos pacientes e quais são suas matrículas, sistema com autênticação e
     dados (MongoDB)`,
-  },
-  {
-    name: "Challenge Suflex Full-stack",
-    stacks: ["Next", "Node", "Typescript", "Css-In-Js", "Postgress"],
-    link: "https://challenge-surflex-front.herokuapp.com/",
-    github: "https://github.com/jrsousadev/challenge-surflex-front",
-    image: "https://i.imgur.com/9CO08UU.png",
-    description: `Challenge Full-stack nível pleno, neste projeto é possível
-    realizar um registro/autênticação de usuário, filtrar personagens, e criar 
-    própria lista de personagens favoritos (salvando em banco de dados) , 
-    consumindo API visando a performance do projeto e a experiência do usuário.`,
   },
 ];
