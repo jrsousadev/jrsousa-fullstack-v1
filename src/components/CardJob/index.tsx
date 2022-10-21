@@ -34,12 +34,12 @@ const CardJob = ({
   const handleOnMouseEnter = () => {
     setShowInfos(true);
     setCursorVariant("enterJob");
-  }
+  };
 
   const handleOnMouseLeave = () => {
     setShowInfos(false);
     setCursorVariant("default");
-  }
+  };
 
   return (
     <ChakraDiv
@@ -93,17 +93,19 @@ const CardJob = ({
                 </a>
               </Button>
             )}
-            <Button className={styles.buttonShow}>
-              <a href={link} target="_blank">
-                Ver mais
-                <IoIosAdd
-                  className={styles.iconShowMore}
-                  style={{
-                    color: showInfos ? "#0e0e0ff1" : "#8257e5",
-                  }}
-                />
-              </a>
-            </Button>
+            {link && (
+              <Button className={styles.buttonShow}>
+                <a href={link} target="_blank">
+                  Ver mais
+                  <IoIosAdd
+                    className={styles.iconShowMore}
+                    style={{
+                      color: showInfos ? "#0e0e0ff1" : "#8257e5",
+                    }}
+                  />
+                </a>
+              </Button>
+            )}
           </Box>
         </Box>
 
