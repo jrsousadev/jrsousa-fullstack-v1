@@ -7,6 +7,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="Especialista em desenvolvimento Web, entrego soluções em forma de códigos utilizando React, Node e outras tecnologias."
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, Fullstack, Front-end, Back-end, Desenvolvedor Web, Node, React, NextJS, Docker"
+        />
+        <meta name="author" content="Junior Sousa" />
+
         <link rel="shortcut icon" href="/images/favicon.png" />
         <link
           rel="apple-touch-icon"
