@@ -13,16 +13,13 @@ import CardStack from "../components/CardStack";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Router from "next/router";
+import CustomMouse from "../components/CustomMouse";
 
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
 });
 
 const Home: NextPage = () => {
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
   const [cursorVariant, setCursorVariant] = useState("default");
   const [scrollPosition, setScrollPosition] = useState(0);
   const [opacityTitle, setOpacityTitle] = useState<number>(1);
@@ -48,42 +45,6 @@ const Home: NextPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const mouseMove = (e: any) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
-
-    window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    };
-  }, []);
-
-  const variants = {
-    default: {
-      scale: 1,
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    options: {
-      opacity: 0.5,
-      scale: 1.5,
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    enterJob: {
-      opacity: 0.5,
-      scale: 2,
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-      backgroundColor: "#000",
-    },
-  };
-
   const enterMouseOptions = () => {
     setCursorVariant("options");
   };
@@ -98,11 +59,7 @@ const Home: NextPage = () => {
         <title>Full Stack Engineer · Junior Sousa</title>
       </Head>
 
-      <motion.div
-        className={styles.cursor}
-        variants={variants}
-        animate={cursorVariant}
-      />
+      <CustomMouse cursorVariant={cursorVariant} />
 
       <header className={styles.containerHeader}>
         <div className={styles.optionsMenuContainer}>
@@ -173,7 +130,10 @@ const Home: NextPage = () => {
       <main>
         <section className={styles.containerSectionTitles}>
           <Particle />
-          <div className={styles.containerTitle} style={{opacity: opacityTitle}}>
+          <div
+            className={styles.containerTitle}
+            style={{ opacity: opacityTitle }}
+          >
             <ChakraDiv
               className={styles.title}
               scrollMarginY={{ opacity: 0.5 }}
