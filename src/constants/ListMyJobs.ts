@@ -61,13 +61,26 @@ export const myJobs = [
     resultados e também seus cursos ao vivo juntamente com seus alunos.`,
   },
   {
+    name: "Live chat",
+    stacks: ["Node", "Typescript", "Supertest", "Jest", "Prisma", "MongoDB"],
+    github: "https://github.com/jrsousadev/api-pagarme-nodejs",
+    link: "https://live-chat-web.vercel.app/637d9d6fcaeea7b8cd7d7fed",
+    image:
+      "https://i.imgur.com/0JJOysy.png",
+    description: `
+      Projeto criado com o intuito de melhorar minhas habilidades, no mesmo foi
+      desenvolvido um pequeno sistema inspirando-se no WhatsApp de forma rasa, desde
+      criação da API e de testes automotizados.
+    `,
+  },
+  {
     name: "API PagarMe NodeJS",
     stacks: ["Node", "Typescript", "Swagger", "PagarMe", "Solid", "MongoDB"],
     github: "https://github.com/jrsousadev/api-pagarme-nodejs",
     image:
       "https://partnernetwork.vtexassets.com/arquivos/ids/155570/logo_pagarme.png?v=637599700153200000",
     description: `
-      Projeto open source, desenvolvido com o intuito de ajudar desenvolvedores
+      Projeto desenvolvido com o intuito de ajudar desenvolvedores
       com a implementação da API do PagarMe (Pagamentos e transações) com Typescript no NodeJS e 
       utilizando o banco de dados MongoDB. 
     `,
@@ -78,7 +91,7 @@ export const myJobs = [
     link: "https://fullcalendar-scheduler-web.vercel.app/",
     github: "https://github.com/jrsousadev/fullcalendar-scheduler-web",
     image: "https://i.imgur.com/f2RukgD.png",
-    description: `Projeto open source inspirado no Google Agenda, o mesmo foi criado
+    description: `Componente inspirado no Google Agenda, o mesmo foi criado
     com o intuito de ajudar pessoas que necessitem das funcionalidades prontas de listar/criar/atualizar/delete
     eventos tanto no front-end quanto integrado ao back-end. (Open Source)`,
   },
