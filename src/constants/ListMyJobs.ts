@@ -12,18 +12,20 @@ export const myJobs = [
       de desenvolvimento escalável e auxiliar a atuação de novos desenvolvedores na equipe.
     `,
   },
-/*   {
-    name: "Native Pay (Sócio)",
-    stacks: ["Node", "Typescript", "Swagger", "Next", "Solid", "MongoDB"],
-    github: "https://github.com/jrsousadev/api-pagarme-nodejs",
-    image:
-      "https://partnernetwork.vtexassets.com/arquivos/ids/155570/logo_pagarme.png?v=637599700153200000",
+  {
+    name: "BOT Checkin (Founder)",
+    stacks: ["Next", "Node", "MongoDB", "Css-In-Js", "Prisma"],
+    link: "https://conheca-bot-checkin.vercel.app/",
+    github: "",
+    image: "https://i.imgur.com/fOQJE0f.png",
     description: `
-      Responsável pela criação do checkout (Front/Back) implementando metódo de pagamento via PagarMe, minhas funções 
-      é manter o código legível com o conceito clean code/solid além de está desenvolvendo novas features e prezando também 
-      a segurança do checkout anti-furtos.
+      O BOT CHECK-IN surgiu para revolucionar o mercado de automações de 
+      CHATBOT para WhatsApp, e finalmente, viemos para oportunizar que os 
+      profissionais que trabalham coletando check-ins/relatórios de TODOS OS SEUS 
+      CLIENTES via WhatsApp tivessem um assistente que o ajuda-se nessa rotina fazendo 
+      com que o mesmo ganha-se mais tempo e qualidade de vida.
     `,
-  }, */
+  },
   {
     name: "Unitok",
     stacks: ["Next", "Node", "Typescript", "Aws", "Css-In-Js", "MongoDB"],
@@ -61,12 +63,22 @@ export const myJobs = [
     resultados e também seus cursos ao vivo juntamente com seus alunos.`,
   },
   {
+    name: "BOT Checkin (LP)",
+    stacks: ["Next", "Typescript", "Css-In-Js", "Front-end"],
+    link: "https://conheca-bot-checkin.vercel.app",
+    image: "https://i.imgur.com/tk4bZ8K.png",
+    description: `      O BOT CHECK-IN surgiu para revolucionar o mercado de automações de 
+    CHATBOT para WhatsApp, e finalmente, viemos para oportunizar que os 
+    profissionais que trabalham coletando check-ins/relatórios de TODOS OS SEUS 
+    CLIENTES via WhatsApp tivessem um assistente que o ajuda-se nessa rotina fazendo 
+    com que o mesmo ganha-se mais tempo e qualidade de vida.`,
+  },
+  {
     name: "Live chat",
     stacks: ["Node", "Typescript", "Supertest", "Jest", "Prisma", "MongoDB"],
     github: "https://github.com/jrsousadev/api-pagarme-nodejs",
     link: "https://live-chat-web.vercel.app/637d9d6fcaeea7b8cd7d7fed",
-    image:
-      "https://i.imgur.com/0JJOysy.png",
+    image: "https://i.imgur.com/0JJOysy.png",
     description: `
       Projeto criado com o intuito de melhorar minhas habilidades, no mesmo foi
       desenvolvido um pequeno sistema inspirando-se no WhatsApp de forma rasa, desde
