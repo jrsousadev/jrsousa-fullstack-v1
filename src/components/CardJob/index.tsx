@@ -1,18 +1,15 @@
-import { Box, chakra, Text, Image, Button } from "@chakra-ui/react";
+import { Box, chakra, Text, Button } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { memo, useCallback, useState } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoIosAdd } from "react-icons/io";
+import { JobProps } from "../../constants/ListMyJobs";
 
+import Image from "next/image";
 import styles from "./CardJob.module.scss";
 
 type CardJobProps = {
-  name: string;
-  image: string;
-  description: string;
-  github: string;
-  link: string;
-  stacks: string[];
+  job: JobProps;
   setCursorVariant: (parameter: string) => void;
 };
 
@@ -20,24 +17,12 @@ const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
 });
 
-const CardJob = ({
-  description,
-  name,
-  link,
-  image,
-  stacks,
-  github,
-  setCursorVariant,
-}: CardJobProps) => {
-  const [showInfos, setShowInfos] = useState<boolean>(false);
-
+const CardJob = ({ job, setCursorVariant }: CardJobProps) => {
   const handleOnMouseEnter = () => {
-    setShowInfos(true);
     setCursorVariant("enterJob");
   };
 
   const handleOnMouseLeave = () => {
-    setShowInfos(false);
     setCursorVariant("default");
   };
 
@@ -48,80 +33,34 @@ const CardJob = ({
       transition={"all 0.5s"}
       className={styles.containerBoxMainAnimatted}
     >
-      <Box
-        onMouseEnter={handleOnMouseEnter}
-        onMouseLeave={handleOnMouseLeave}
-        className={styles.containerBoxMain}
-      >
-        <Image
-          src={image}
-          alt={`Imagem do projeto ${name}`}
+      <Box className={styles.containerBoxMain}>
+        <div
           className={styles.image}
-        />
-
-        <Box className={styles.containerInfos}>
-          <Box
-            mt="1"
-            fontWeight="semibold"
-            as="h4"
-            lineHeight="tight"
-            noOfLines={1}
-            className={styles.infosTitle}
-          >
-            {name}
-          </Box>
-
-          <Box className={styles.containerStacks}>
-            {stacks.map((stack, index) => (
-              <Text className={styles.stacksText} key={index}>
-                {stack}
-              </Text>
-            ))}
-          </Box>
-
-          <Box className={styles.containerButtons}>
-            {github && (
-              <Button className={styles.buttonGithub}>
-                <a href={github} target="_blank">
-                  Github
-                  <BsArrowUpRight
-                    style={{
-                      color: showInfos ? "#0e0e0ff1" : "#8257e5",
-                      marginLeft: "7px",
-                    }}
-                  />
-                </a>
-              </Button>
-            )}
-            {link && (
-              <Button className={styles.buttonShow}>
-                <a href={link} target="_blank">
-                  Ver mais
-                  <IoIosAdd
-                    className={styles.iconShowMore}
-                    style={{
-                      color: showInfos ? "#0e0e0ff1" : "#8257e5",
-                    }}
-                  />
-                </a>
-              </Button>
-            )}
-          </Box>
-        </Box>
-
-        <Box
-          className={styles.containerShowInfos}
-          style={{
-            visibility: showInfos ? "visible" : "hidden",
-            opacity: showInfos ? 1 : 0,
-          }}
+          onMouseEnter={handleOnMouseEnter}
+          onMouseLeave={handleOnMouseLeave}
         >
-          <div className={styles.content}>
-            <div className={styles.contentTitle}>{name}</div>
+          <Image
+            src={job.image}
+            width={job.imageWidth}
+            height={job.imageHeight}
+            alt={`Imagem do projeto ${job.name}`}
+          />
+        </div>
 
-            <p className={styles.contentParagraph}>{description}</p>
-          </div>
-        </Box>
+        <div className={styles.infos}>
+          <h6 className={styles.title}>
+            {job.name} - {job.slogan}
+          </h6>
+          <p className={styles.period}>{job.period}</p>
+          <p className={styles.description}>{job.description}</p>
+          <button
+            className={styles.buttonRedirect}
+            onMouseEnter={handleOnMouseEnter}
+            onMouseLeave={handleOnMouseLeave}
+          >
+            <a href={job.link} target="_blank">Saiba mais</a>
+          </button>
+        </div>
       </Box>
     </ChakraDiv>
   );
