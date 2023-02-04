@@ -2,19 +2,18 @@ import { Box, chakra, Text } from "@chakra-ui/react";
 import { memo } from "react";
 import { BiStar } from "react-icons/bi";
 import { GrDocker, GrMysql, GrReactjs } from "react-icons/gr";
+import { IoLogoNodejs } from "react-icons/io";
+import { DiDart, DiLinux } from "react-icons/di";
+import { isValidMotionProp, motion } from "framer-motion";
+import { FaAws } from "react-icons/fa";
 import {
   SiJavascript,
   SiMongodb,
   SiNextdotjs,
-  SiPostgresql,
   SiTypescript,
 } from "react-icons/si";
-import { TiHtml5 } from "react-icons/ti";
-import { IoLogoCss3, IoLogoNodejs } from "react-icons/io";
-import { isValidMotionProp, motion } from "framer-motion";
 
 import styles from "./CardStack.module.scss";
-import { FaAws } from "react-icons/fa";
 
 type CardStackProps = {
   stack: string;
@@ -28,30 +27,28 @@ const ChakraDiv = chakra(motion.div, {
 const CardStack = ({ isMainStack, stack }: CardStackProps) => {
   const returnStack = () => {
     switch (stack) {
-      case "react":
+      case "React / React Native":
         return <GrReactjs className={styles.iconStack} />;
-      case "typescript":
+      case "Typescript":
         return <SiTypescript className={styles.iconStack} />;
-      case "next":
+      case "NextJS":
         return <SiNextdotjs className={styles.iconStack} />;
-      case "node":
+      case "NodeJS":
         return <IoLogoNodejs className={styles.iconStack} />;
-      case "mongo":
+      case "MongoDB":
         return <SiMongodb className={styles.iconStack} />;
-      case "postgress":
-        return <SiPostgresql className={styles.iconStack} />;
-      case "mysql":
+      case "SQL":
         return <GrMysql className={styles.iconStack} />;
-      case "javascript":
+      case "Javascript":
         return <SiJavascript className={styles.iconStack} />;
-      case "html":
-        return <TiHtml5 className={styles.iconStack} />;
-      case "css":
-        return <IoLogoCss3 className={styles.iconStack} />;
-      case "docker":
+      case "Docker":
         return <GrDocker className={styles.iconStack} />;
-      case "aws":
+      case "AWS Services":
         return <FaAws className={styles.iconStack} />;
+      case "Linux":
+        return <DiLinux className={styles.iconStack} />;
+      case "Dart":
+        return <DiDart className={styles.iconStack} />;
     }
   };
 
@@ -73,7 +70,10 @@ const CardStack = ({ isMainStack, stack }: CardStackProps) => {
             <BiStar size={17} /> Main Stack
           </Text>
         )}
-        <Box className={styles.BoxContent}>{returnStack()}</Box>
+
+        <Box className={styles.BoxContent}>
+          {returnStack()} <p>{stack}</p>
+        </Box>
       </Box>
     </ChakraDiv>
   );
