@@ -2,18 +2,25 @@ import type { NextPage } from "next";
 import { chakra, Text } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { myStacksBack, myStacksFront } from "../constants/ListMyStacks";
+import { SwiperSlide } from "swiper/react";
+import {
+  myStacksBack,
+  myStacksDatabase,
+  myStacksFront,
+  myStacksScalability,
+} from "../constants/ListMyStacks";
 import { myJobs } from "../constants/ListMyJobs";
 import { myContacts } from "../constants/ListMyContacts";
+import { myFreelancers } from "../constants/ListMyFreelancers";
 
 import Particle from "../components/Particle";
 import CardJob from "../components/CardJob";
 import CardStack from "../components/CardStack";
-
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Router from "next/router";
 import CustomMouse from "../components/CustomMouse";
+import SwiperComponent from "../components/SwiperCarousel";
 
 const ChakraDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === "children",
@@ -30,7 +37,7 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    if (scrollPosition >= 4300) {
+    if (scrollPosition >= 3800) {
       setOpacityTitle(0);
     } else {
       setOpacityTitle(1);
@@ -74,7 +81,7 @@ const Home: NextPage = () => {
               onMouseLeave={leaveMouseOptions}
               onClick={() => Router.push("#stacks")}
             >
-              Stacks
+              Know-how
             </i>
           </ChakraDiv>
           <ChakraDiv
@@ -88,10 +95,10 @@ const Home: NextPage = () => {
               onMouseLeave={leaveMouseOptions}
               onClick={() => Router.push("#jobs")}
             >
-              Meus Jobs
+              Portfolio
             </i>
           </ChakraDiv>
-          <ChakraDiv
+          {/* <ChakraDiv
             animate={{
               scale: [2, 1],
             }}
@@ -109,7 +116,7 @@ const Home: NextPage = () => {
                 Currículo
               </a>
             </i>
-          </ChakraDiv>
+          </ChakraDiv> */}
           <ChakraDiv
             animate={{
               scale: [2, 1],
@@ -143,14 +150,14 @@ const Home: NextPage = () => {
             <Text className={styles.subtitle}>Desenvolvedor</Text>
             <Text className={styles.subtitle}>Full-stack</Text>
             <Text className={styles.paragraph}>
-              Profissional especialista em desenvolvimento web, focado nas
-              stacks React e NodeJS, autêntico e curioso.
+              Especialista em desenvolvimento web com React, Node e desenvolvimento mobile com 
+              React Native e Dart.
             </Text>
           </div>
         </section>
 
         <section className={styles.containerSectionStacks} id="stacks">
-          <Text className={styles.title}>Front</Text>
+          <Text className={styles.title}>Front-end UI/UX</Text>
 
           <div className={styles.gridStacks}>
             {myStacksFront.map((stack, index) => (
@@ -162,7 +169,7 @@ const Home: NextPage = () => {
             ))}
           </div>
 
-          <Text className={styles.title}>Back</Text>
+          <Text className={styles.title}>Backend</Text>
 
           <div className={styles.gridStacks}>
             {myStacksBack.map((stack, index) => (
@@ -173,23 +180,62 @@ const Home: NextPage = () => {
               />
             ))}
           </div>
-        </section>
 
-        <section className={styles.containerSectionJobs} id="jobs">
-          <div className={styles.gridJobs}>
-            {myJobs.map((job, index) => (
-              <CardJob
-                stacks={job.stacks ?? [""]}
-                name={job.name ?? ""}
-                image={job.image ?? ""}
-                description={job.description ?? ""}
-                link={job.link ?? ""}
-                github={job.github ?? ""}
-                setCursorVariant={setCursorVariant}
+          <Text className={styles.title}>Databases</Text>
+          <div className={styles.gridStacks}>
+            {myStacksDatabase.map((stack, index) => (
+              <CardStack
+                isMainStack={stack.isMainStack}
+                stack={stack.name}
                 key={index}
               />
             ))}
           </div>
+
+          <Text className={styles.title}>Escalabilidade</Text>
+          <div className={styles.gridStacks}>
+            {myStacksScalability.map((stack, index) => (
+              <CardStack
+                isMainStack={stack.isMainStack}
+                stack={stack.name}
+                key={index}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.containerSectionJobs} id="jobs">
+          <Text className={styles.titleSectionJobs}>Portfolio</Text>
+          <Text className={styles.subtitleSectionJobs}>Empresas</Text>
+
+          <SwiperComponent>
+            {myJobs.map((job, index) => (
+              <SwiperSlide>
+                <CardJob
+                  job={job}
+                  setCursorVariant={setCursorVariant}
+                  key={index}
+                />
+              </SwiperSlide>
+            ))}
+          </SwiperComponent>
+        </section>
+
+        <section className={styles.containerSectionJobs} id="freelancers">
+          <Text className={styles.titleSectionJobs}>Portfolio</Text>
+          <Text className={styles.subtitleSectionJobs}>Freelancers</Text>
+
+          <SwiperComponent>
+            {myFreelancers.map((job, index) => (
+              <SwiperSlide>
+                <CardJob
+                  job={job}
+                  setCursorVariant={setCursorVariant}
+                  key={index}
+                />
+              </SwiperSlide>
+            ))}
+          </SwiperComponent>
         </section>
 
         <section className={styles.containerSectionContacts} id="contacts">
