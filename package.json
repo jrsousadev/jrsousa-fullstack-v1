@@ -19,6 +19,7 @@
     "react-icons": "^4.4.0",
     "react-tsparticles": "^2.2.3",
     "sass": "^1.54.5",
+    "swiper": "^9.0.2",
     "tsparticles": "^2.2.3"
   },
   "devDependencies": {
