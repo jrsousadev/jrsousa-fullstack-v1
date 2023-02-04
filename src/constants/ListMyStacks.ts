@@ -1,18 +1,21 @@
 export const myStacksFront = [
-  { name: "react", isMainStack: true },
-  { name: "next", isMainStack: true },
-  { name: "typescript", isMainStack: true },
-  { name: "javascript", isMainStack: false },
-  { name: "html", isMainStack: false },
-  { name: "css", isMainStack: false },
+  { name: "React / React Native", isMainStack: false },
+  { name: "NextJS", isMainStack: false },
+  { name: "Javascript", isMainStack: false },
 ];
 
 export const myStacksBack = [
-  { name: "node", isMainStack: true },
-  { name: "mongo", isMainStack: true },
-  { name: "typescript", isMainStack: true },
-  { name: "postgress", isMainStack: false },
-  { name: "mysql", isMainStack: false },
-  { name: "docker", isMainStack: false },
-  { name: "aws", isMainStack: false },
+  { name: "NodeJS", isMainStack: false },
+  { name: "Dart", isMainStack: false },
+];
+
+export const myStacksDatabase = [
+  { name: "SQL", isMainStack: false },
+  { name: "MongoDB", isMainStack: false },
+];
+
+export const myStacksScalability = [
+  { name: "Linux", isMainStack: false },
+  { name: "Docker", isMainStack: false },
+  { name: "AWS Services", isMainStack: false },
 ];
