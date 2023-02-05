@@ -1,8 +1,6 @@
-import { Box, chakra, Text, Button } from "@chakra-ui/react";
+import { Box, chakra } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
-import { memo, useCallback, useState } from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import { IoIosAdd } from "react-icons/io";
+import { memo } from "react";
 import { JobProps } from "../../constants/ListMyJobs";
 
 import Image from "next/image";
