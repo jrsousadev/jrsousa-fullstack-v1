@@ -4,18 +4,13 @@ import { memo } from "react";
 
 import styles from "./Carousel.module.scss";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/autoplay";
 
 interface SwiperComponentProps {
   children: React.ReactNode;
 }
 
 const SwiperComponent = ({ children }: SwiperComponentProps) => {
-  console.log("SWIPER")
-
   return (
     <Swiper
       breakpoints={{
