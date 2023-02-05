@@ -24,7 +24,7 @@ export const myFreelancers: FreelancersProps[] = [
     imageHeight: 110,
     description: `
       Responsável pelo desenvolvimento da plataforma de cursos da Degeocollege, visando perfomance, desenvolvimento
-      de fluxos e experiência do usuário juntamente com o Design UX/UI.
+      de fluxos, experiência do usuário juntamente com o Design UX/UI e construção de toda regra de negócios com o Back-end.
     `,
   },
   {
