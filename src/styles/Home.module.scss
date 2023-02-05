@@ -140,6 +140,141 @@
   }
 }
 
+.containerSectionMe {
+  width: 100%;
+  padding: 4rem 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .titleSectionJobs {
+    font-family: "Work Sans", sans-serif;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+
+    padding-bottom: 0.5rem;
+  }
+
+  .subtitleSectionJobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+
+    font-family: "Work Sans", sans-serif;
+
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    margin-left: -8px;
+
+    padding-bottom: 2rem;
+
+    &::before,
+    &::after {
+      content: "";
+      max-width: 44px;
+      width: 100%;
+      background-color: #000;
+      display: block;
+      height: 2px;
+      border-radius: 5px;
+    }
+  }
+
+  .containerInfosMe {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+
+    z-index: 9999;
+
+    background-color: white;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.09);
+    border: 1px solid whitesmoke;
+
+    padding: 3rem 2rem;
+
+    @media (max-width: 1160px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .myPhoto {
+      max-width: 450px;
+      width: 100%;
+
+      @media (max-width: 1160px) {
+        max-width: 600px;
+      }
+
+      .myPhotoImg {
+        border-radius: 5px;
+      }
+    }
+
+    .myInfos {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      width: 100%;
+      padding-left: 2rem;
+      text-align: left;
+
+      @media (max-width: 1160px) {
+        padding-left: 0;
+        max-width: 600px;
+      }
+
+      @media (max-width: 500px) {
+        text-align: center;
+      }
+
+      h1 {
+        font-family: "Work Sans", sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-family: "Work Sans", sans-serif;
+        font-size: 1rem;
+
+        @media (max-width: 1330px) {
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 1220px) {
+          font-size: 0.8rem;
+        }
+
+        @media (max-width: 1160px) {
+          font-size: 0.9rem;
+        }
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 1rem;
+    justify-content: center;
+  }
+}
+
 .containerSectionJobs {
   width: 100%;
   padding: 4rem 10rem;
