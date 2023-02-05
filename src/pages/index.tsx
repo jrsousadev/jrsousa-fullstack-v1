@@ -233,7 +233,7 @@ const Home: NextPage = () => {
               </p>
 
               <p>
-                Até que decidir da uma chance após descobrir que um tio meu era
+                Iniciei na programação em <strong>Junho de 2021</strong> após descobrir que um tio meu era
                 programador sênior, comecei a estudar, pegar algumas dicas e
                 adivinha?{" "}
                 <strong>Me apaixonei completamente pela profissão</strong>
