@@ -1,7 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ColorModeScript } from "@chakra-ui/react";
 import { theme } from "../contexts/ThemeContext";
-import favicon from "../public/favicon.ico";
 class MyDocument extends Document {
   render() {
     return (
