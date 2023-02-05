@@ -33,7 +33,7 @@ export const myJobs: JobProps[] = [
   },
   {
     name: "BotCheckin",
-    slogan: "Chatbot",
+    slogan: "Chatbot (Saas)",
     link: "https://conheca-bot-checkin.vercel.app/",
     period: "Dec 2022 - Present",
     image: LogoBotCheckin,
