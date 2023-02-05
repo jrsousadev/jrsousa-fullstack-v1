@@ -10,11 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Especialista em desenvolvimento Web, entrego soluções em forma de códigos utilizando React, Node e outras tecnologias."
+          content="Especialista em desenvolvimento software Web e mobile, entrego soluções em forma de códigos utilizando React, Node e outras tecnologias."
         />
         <meta
           name="keywords"
-          content="HTML, CSS, JavaScript, Fullstack, Front-end, Back-end, Desenvolvedor Web, Node, React, NextJS, Docker"
+          content="HTML, CSS, JavaScript, Fullstack, Front-end, Back-end, Desenvolvedor Web, Node, React, NextJS, Docker, React native"
         />
         <meta name="author" content="Junior Sousa" />
 
