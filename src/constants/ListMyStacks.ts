@@ -2,6 +2,7 @@ export const myStacksFront = [
   { name: "React / React Native", isMainStack: false },
   { name: "NextJS", isMainStack: false },
   { name: "Javascript", isMainStack: false },
+  { name: "Typescript", isMainStack: false },
 ];
 
 export const myStacksBack = [
