@@ -64,6 +64,8 @@
     width: max-content;
 
     a {
+      display: flex;
+      align-items: center;
       font-size: 0.9rem;
       cursor: none;
     }

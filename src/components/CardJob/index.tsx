@@ -5,6 +5,7 @@ import { JobProps } from "../../constants/ListMyJobs";
 
 import Image from "next/image";
 import styles from "./CardJob.module.scss";
+import { IoIosArrowForward } from "react-icons/io";
 
 type CardJobProps = {
   job: JobProps;
@@ -56,7 +57,7 @@ const CardJob = ({ job, setCursorVariant }: CardJobProps) => {
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           >
-            <a href={job.link} target="_blank">Saiba mais</a>
+            <a href={job.link} target="_blank">Saiba mais <IoIosArrowForward /></a>
           </button>
         </div>
       </Box>
