@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { chakra, Text } from "@chakra-ui/react";
+import { chakra, Text, Image } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { SwiperSlide } from "swiper/react";
@@ -93,12 +93,12 @@ const Home: NextPage = () => {
               className={styles.textMenu}
               onMouseEnter={enterMouseOptions}
               onMouseLeave={leaveMouseOptions}
-              onClick={() => Router.push("#jobs")}
+              onClick={() => Router.push("#me")}
             >
-              Portfolio
+              Sobre mim
             </i>
           </ChakraDiv>
-          {/* <ChakraDiv
+          <ChakraDiv
             animate={{
               scale: [2, 1],
             }}
@@ -107,16 +107,11 @@ const Home: NextPage = () => {
               className={styles.textMenu}
               onMouseEnter={enterMouseOptions}
               onMouseLeave={leaveMouseOptions}
+              onClick={() => Router.push("#jobs")}
             >
-              <a
-                href="/files/juniorsousa-curriculo.pdf"
-                target="_blank"
-                download
-              >
-                Currículo
-              </a>
+              Portfólio
             </i>
-          </ChakraDiv> */}
+          </ChakraDiv>
           <ChakraDiv
             animate={{
               scale: [2, 1],
@@ -150,8 +145,8 @@ const Home: NextPage = () => {
             <Text className={styles.subtitle}>Desenvolvedor</Text>
             <Text className={styles.subtitle}>Full-stack</Text>
             <Text className={styles.paragraph}>
-              Especialista em desenvolvimento web com React, Node e desenvolvimento mobile com 
-              React Native e Dart.
+              Especialista em desenvolvimento software web com React, Node e
+              desenvolvimento mobile com React Native e Dart.
             </Text>
           </div>
         </section>
@@ -204,34 +199,90 @@ const Home: NextPage = () => {
           </div>
         </section>
 
+        <section className={styles.containerSectionMe} id="me">
+          <Text className={styles.titleSectionJobs}>SOBRE MIM</Text>
+          <Text className={styles.subtitleSectionJobs}>Quem sou eu</Text>
+
+          <div className={styles.containerInfosMe}>
+            <div className={styles.myPhoto}>
+              <Image
+                className={styles.myPhotoImg}
+                src={"https://i.imgur.com/bsErl5u.jpg"}
+              />
+            </div>
+            <div className={styles.myInfos}>
+              <h1>Hello World! 👋</h1>
+
+              <p>Se quiser me conhecer um pouco mais, está no lugar certo!</p>
+
+              <p>
+                Eu me chamo <strong>Junior Sousa</strong> e tenho 20 anos.
+              </p>
+
+              <p>
+                Antes de começar na programação eu já trabalhava com internet
+                desde fevereiro de 2020, acabei criando uma empresa de{" "}
+                <strong>gestão de tráfego pago</strong> onde até hoje é uma das
+                minhas principais fonte de renda.
+              </p>
+
+              <p>
+                Eu já havia conhecido programação lá nos meados de 2018 porém
+                não levei a fundo achando que a profissão não era para mim{" "}
+                <strong>(sim eu não gostava de programação)</strong>
+              </p>
+
+              <p>
+                Até que decidir da uma chance após descobrir que um tio meu era
+                programador sênior, comecei a estudar, pegar algumas dicas e
+                adivinha?{" "}
+                <strong>Me apaixonei completamente pela profissão</strong>
+              </p>
+
+              <p>
+                Logo conseguir a primeira oportunidade de trabalho profissional{" "}
+                <strong>
+                  (até ai já tinha construido alguns sistemas complexos)
+                </strong>{" "}
+                e com muito esforço evoluir bastante
+              </p>
+
+              <p>
+                Hoje eu sou{" "}
+                <strong>
+                  especialista em desenvolvimento software web e mobile
+                </strong>{" "}
+                e já tenho uma certa bagagem apesar do pouco tempo na profissão.
+              </p>
+
+              <p>Obrigado por ler até aqui!</p>
+            </div>
+          </div>
+        </section>
+
         <section className={styles.containerSectionJobs} id="jobs">
-          <Text className={styles.titleSectionJobs}>Portfolio</Text>
+          <Text className={styles.titleSectionJobs}>Portfólio</Text>
           <Text className={styles.subtitleSectionJobs}>Empresas</Text>
 
           <SwiperComponent>
             {myJobs.map((job, index) => (
-              <SwiperSlide>
-                <CardJob
-                  job={job}
-                  setCursorVariant={setCursorVariant}
-                  key={index}
-                />
+              <SwiperSlide key={index}>
+                <CardJob job={job} setCursorVariant={setCursorVariant} />
               </SwiperSlide>
             ))}
           </SwiperComponent>
         </section>
 
         <section className={styles.containerSectionJobs} id="freelancers">
-          <Text className={styles.titleSectionJobs}>Portfolio</Text>
+          <Text className={styles.titleSectionJobs}>Portfólio</Text>
           <Text className={styles.subtitleSectionJobs}>Freelancers</Text>
 
           <SwiperComponent>
             {myFreelancers.map((job, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <CardJob
                   job={job}
                   setCursorVariant={setCursorVariant}
-                  key={index}
                 />
               </SwiperSlide>
             ))}
