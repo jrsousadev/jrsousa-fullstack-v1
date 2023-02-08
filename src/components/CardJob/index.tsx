@@ -2,10 +2,10 @@ import { Box, chakra } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { memo } from "react";
 import { JobProps } from "../../constants/ListMyJobs";
+import { IoIosArrowForward } from "react-icons/io";
 
 import Image from "next/image";
 import styles from "./CardJob.module.scss";
-import { IoIosArrowForward } from "react-icons/io";
 
 type CardJobProps = {
   job: JobProps;
@@ -52,13 +52,17 @@ const CardJob = ({ job, setCursorVariant }: CardJobProps) => {
           </h6>
           <p className={styles.period}>{job.period}</p>
           <p className={styles.description}>{job.description}</p>
-          <button
-            className={styles.buttonRedirect}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          >
-            <a href={job.link} target="_blank">Saiba mais <IoIosArrowForward /></a>
-          </button>
+          {job.link && (
+            <button
+              className={styles.buttonRedirect}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}
+            >
+              <a href={job.link} target="_blank">
+                Saiba mais <IoIosArrowForward />
+              </a>
+            </button>
+          )}
         </div>
       </Box>
     </ChakraDiv>

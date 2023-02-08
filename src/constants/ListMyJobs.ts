@@ -8,7 +8,7 @@ import { StaticImageData } from "next/image";
 export type JobProps = {
   name: string;
   slogan: string;
-  link: string;
+  link?: string;
   image: StaticImageData;
   imageWidth: number;
   imageHeight: number;
