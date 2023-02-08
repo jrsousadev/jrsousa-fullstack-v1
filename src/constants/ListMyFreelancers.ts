@@ -1,13 +1,14 @@
 import LogoBotCheckin from "../../public/assets/logo-botcheckin.png";
 import LogoDegeo from "../../public/assets/logo-degeo.png";
 import LogoFelipeFarah from "../../public/assets/logo-felipefarah.png";
+import LogoOpiniaoCerta from "../../public/assets/logo-opiniao.png";
 
 import { StaticImageData } from "next/image";
 
 export type FreelancersProps = {
   name: string;
   slogan: string;
-  link: string;
+  link?: string;
   image: StaticImageData;
   imageWidth: number;
   imageHeight: number;
@@ -25,6 +26,18 @@ export const myFreelancers: FreelancersProps[] = [
     description: `
       Responsável pelo desenvolvimento da plataforma de cursos da Degeocollege, visando perfomance, desenvolvimento
       de fluxos, experiência do usuário juntamente com o Design UX/UI e construção de toda regra de negócios com o Back-end.
+    `,
+  },
+  {
+    name: "Opinião Certa",
+    slogan: "Plataforma de pesquisa",
+    /* link: "", */
+    image: LogoOpiniaoCerta,
+    imageWidth: 200,
+    imageHeight: 110,
+    description: `
+      Responsável pelo desenvolvimento da plataforma de pesquisa da opinião certa, feita para usuários responderem pesquisas
+      e ganhar saldo para resgatar prêmios.
     `,
   },
   {
