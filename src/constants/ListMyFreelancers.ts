@@ -2,6 +2,7 @@ import LogoBotCheckin from "../../public/assets/logo-botcheckin.png";
 import LogoDegeo from "../../public/assets/logo-degeo.png";
 import LogoFelipeFarah from "../../public/assets/logo-felipefarah.png";
 import LogoOpiniaoCerta from "../../public/assets/logo-opiniao.png";
+import LogoMines from "../../public/assets/logo-mines.png";
 
 import { StaticImageData } from "next/image";
 
@@ -29,6 +30,18 @@ export const myFreelancers: FreelancersProps[] = [
     `,
   },
   {
+    name: "Mines Lucrativo",
+    slogan: "Robô de apostas",
+    /* link: "", */
+    image: LogoMines,
+    imageWidth: 200,
+    imageHeight: 110,
+    description: `
+      Responsável pelo desenvolvimento do robô de apostas Mines Lucrativo, desenvolvido para usuários realizarem
+      suas apostas na F12 Bet.
+    `,
+  },
+  {
     name: "Opinião Certa",
     slogan: "Plataforma de pesquisa",
     /* link: "", */
@@ -40,6 +53,7 @@ export const myFreelancers: FreelancersProps[] = [
       e ganhar saldo para resgatar prêmios.
     `,
   },
+
   {
     name: "Degeocollege",
     slogan: "Landing Page",
