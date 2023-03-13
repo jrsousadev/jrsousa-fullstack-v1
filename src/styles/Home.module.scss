@@ -193,7 +193,7 @@
     max-width: 1100px;
     width: 100%;
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: space-between;
 
     z-index: 3;
@@ -213,7 +213,6 @@
 
     .myPhoto {
       max-width: 450px;
-      height: 100%;
       width: 100%;
 
       @media (max-width: 1160px) {

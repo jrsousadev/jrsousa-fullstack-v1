@@ -207,7 +207,7 @@ const Home: NextPage = () => {
             <div className={styles.myPhoto}>
               <Image
                 className={styles.myPhotoImg}
-                src={"https://i.imgur.com/bsErl5u.jpg"}
+                src={"https://i.imgur.com/7ruxiXE.png"}
               />
             </div>
             <div className={styles.myInfos}>
