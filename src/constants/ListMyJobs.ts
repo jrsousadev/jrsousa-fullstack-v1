@@ -23,7 +23,7 @@ export const myJobs: JobProps[] = [
     link: "http://usobewell.com/",
     image: LogoBeWell,
     imageWidth: 110,
-    imageHeight: 140,
+    imageHeight: 110,
     period: "Oct 2022 - Present",
     description: `
       Responsável pelo desenvolvimento do sistema cujo objetivo é desenvolver nossas features de acordo
@@ -33,12 +33,12 @@ export const myJobs: JobProps[] = [
   },
   {
     name: "BotCheckin",
-    slogan: "Chatbot (Saas)",
+    slogan: "Saas",
     link: "https://conheca-bot-checkin.vercel.app/",
     period: "Dec 2022 - Present",
     image: LogoBotCheckin,
-    imageWidth: 150,
-    imageHeight: 150,
+    imageWidth: 110,
+    imageHeight: 110,
     description: ` 
       CTO and Founder, sistema desenvolvido com o intuito inicial de resolver um problema de um amigo próximo,
       que após suprir suas necessidades decidimos lançar como um produto Saas, sistema integrado com WhatsApp API, pegando dados recebidos no WhatsApp e exibindo na plataforma web.
@@ -49,8 +49,8 @@ export const myJobs: JobProps[] = [
     slogan: "Cartões digital",
     link: "https://www.unitok.com/",
     image: LogoUnitok,
-    imageWidth: 350,
-    imageHeight: 150,
+    imageWidth: 250,
+    imageHeight: 110,
     period: "Jan 2022 - Sep 2022",
     description: `
       Responsável pelo desenvolvimento de novos produtos, discutir sobre experiência do usuário junto ao 
@@ -62,8 +62,8 @@ export const myJobs: JobProps[] = [
     slogan: "Conarh",
     link: "https://www.unitok.com/conarh2022",
     image: LogoUnitokConarh,
-    imageWidth: 250,
-    imageHeight: 150,
+    imageWidth: 200,
+    imageHeight: 110,
     period: "Jan 2022 - Sep 2022",
     description: ` 
       Responsável pelo desenvolvimento do total zero da plataforma de controle de mailing dos expositores
