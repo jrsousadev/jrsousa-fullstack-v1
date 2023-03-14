@@ -1,8 +1,12 @@
 export const myStacksFront = [
-  { name: "React / React Native", isMainStack: false },
+  { name: "React", isMainStack: false },
   { name: "NextJS", isMainStack: false },
   { name: "Javascript", isMainStack: false },
   { name: "Typescript", isMainStack: false },
+];
+
+export const myStacksMobile = [
+  { name: "React Native", isMainStack: false },
 ];
 
 export const myStacksBack = [
