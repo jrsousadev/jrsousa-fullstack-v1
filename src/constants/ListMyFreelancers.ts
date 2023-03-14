@@ -5,6 +5,7 @@ import LogoOpiniaoCerta from "../../public/assets/logo-opiniao.png";
 import LogoMines from "../../public/assets/logo-mines.png";
 import LogoOgDevelopment from "../../public/assets/logo-og.png";
 import LogoBacklife from "../../public/assets/logo-backlife.png";
+import LogoRastreioSimples from "../../public/assets/logo-rastreio-simples.png";
 
 import { StaticImageData } from "next/image";
 
@@ -19,6 +20,18 @@ export type FreelancersProps = {
 };
 
 export const myFreelancers: FreelancersProps[] = [
+  {
+    name: "Rastreio Simples",
+    slogan: "Automação",
+    link: "https://rastreio-simples.vercel.app/",
+    image: LogoRastreioSimples,
+    imageWidth: 250,
+    imageHeight: 200,
+    description: `
+      Criação de Landing Page, o CLIENTE me enviou o FIGMA e construir todo designer através do figma,
+      aplicando SEO e responsividade.
+    `,
+  },
   {
     name: "Degeocollege",
     slogan: "Plataforma de curso",
@@ -52,7 +65,7 @@ export const myFreelancers: FreelancersProps[] = [
     imageHeight: 70,
     description: `
       Criação de Landing Page, o CLIENTE me enviou o FIGMA e construir todo designer através do figma,
-      aplicando SEO e responsividade.
+      aplicando SEO, responsividade e aplicação de UTM para mapeamento de tráfego.
     `,
   },
   {
