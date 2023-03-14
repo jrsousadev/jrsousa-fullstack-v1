@@ -4,6 +4,7 @@ import LogoFelipeFarah from "../../public/assets/logo-felipefarah.png";
 import LogoOpiniaoCerta from "../../public/assets/logo-opiniao.png";
 import LogoMines from "../../public/assets/logo-mines.png";
 import LogoOgDevelopment from "../../public/assets/logo-og.png";
+import LogoBacklife from "../../public/assets/logo-backlife.png";
 
 import { StaticImageData } from "next/image";
 
@@ -40,6 +41,18 @@ export const myFreelancers: FreelancersProps[] = [
     description: `
       Criação da Landing Page da OG Development, a mesma foi criada com o intuito de captação de novos clientes e apresentação breve de
       serviços realizado pela mesma.
+    `,
+  },
+  {
+    name: "Backlife",
+    slogan: "Landing Page",
+    link: "https://vejaissourgente.online/bklife-desconto50/",
+    image: LogoBacklife,
+    imageWidth: 150,
+    imageHeight: 70,
+    description: `
+      Criação de Landing Page, o CLIENTE me enviou o FIGMA e construir todo designer através do figma,
+      aplicando SEO e responsividade.
     `,
   },
   {
