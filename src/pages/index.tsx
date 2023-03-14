@@ -7,6 +7,7 @@ import {
   myStacksBack,
   myStacksDatabase,
   myStacksFront,
+  myStacksMobile,
   myStacksScalability,
 } from "../constants/ListMyStacks";
 import { myJobs } from "../constants/ListMyJobs";
@@ -156,6 +157,18 @@ const Home: NextPage = () => {
 
           <div className={styles.gridStacks}>
             {myStacksFront.map((stack, index) => (
+              <CardStack
+                isMainStack={stack.isMainStack}
+                stack={stack.name}
+                key={index}
+              />
+            ))}
+          </div>
+
+          <Text className={styles.title}>Mobile</Text>
+
+          <div className={styles.gridStacks}>
+            {myStacksMobile.map((stack, index) => (
               <CardStack
                 isMainStack={stack.isMainStack}
                 stack={stack.name}
