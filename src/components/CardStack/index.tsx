@@ -27,7 +27,9 @@ const ChakraDiv = chakra(motion.div, {
 const CardStack = ({ isMainStack, stack }: CardStackProps) => {
   const returnStack = () => {
     switch (stack) {
-      case "React / React Native":
+      case "React":
+        return <GrReactjs className={styles.iconStack} />;
+      case "React Native":
         return <GrReactjs className={styles.iconStack} />;
       case "Typescript":
         return <SiTypescript className={styles.iconStack} />;
