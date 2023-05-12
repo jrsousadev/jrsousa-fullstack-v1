@@ -2,6 +2,7 @@ import LogoBeWell from "../../public/assets/logo-bewell.png";
 import LogoBotCheckin from "../../public/assets/logo-botcheckin.png";
 import LogoUnitok from "../../public/assets/logo-unitok.png";
 import LogoUnitokConarh from "../../public/assets/logo-unitok-conarh.png";
+import LogoDegeo from "../../public/assets/logo-degeo.png";
 
 import { StaticImageData } from "next/image";
 
@@ -32,10 +33,22 @@ export const myJobs: JobProps[] = [
     `,
   },
   {
+    name: "Degeo Academy",
+    slogan: "Desenv. de Softwares",
+    link: "http://usobewell.com/",
+    image: LogoDegeo,
+    imageWidth: 110,
+    imageHeight: 110,
+    period: "Fev 2023 - Present",
+    description: `
+      Responsável pelo desenvolvimento do front-end da plataforma e das interfaces em desktop para os softwares.
+    `,
+  },
+  {
     name: "BotCheckin",
     slogan: "Saas",
     link: "https://conheca-bot-checkin.vercel.app/",
-    period: "Dec 2022 - Present",
+    period: "Dec 2022 - Mai 2023",
     image: LogoBotCheckin,
     imageWidth: 110,
     imageHeight: 110,
