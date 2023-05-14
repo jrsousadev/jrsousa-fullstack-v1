@@ -35,7 +35,7 @@ export const myJobs: JobProps[] = [
   {
     name: "Degeo Academy",
     slogan: "Desenv. de Softwares",
-    link: "http://usobewell.com/",
+    link: "https://www.degeoacademy.com/",
     image: LogoDegeo,
     imageWidth: 110,
     imageHeight: 110,
