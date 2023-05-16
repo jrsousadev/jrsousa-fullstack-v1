@@ -28,8 +28,8 @@ export const myFreelancers: FreelancersProps[] = [
     imageWidth: 250,
     imageHeight: 200,
     description: `
-      Criação de Landing Page, o CLIENTE me enviou o FIGMA e construir todo designer através do figma,
-      aplicando SEO e responsividade.
+      Mini-sistema para cliente com o intuito de resolver um problema rotineiro o mesmo é responsável
+      pela automação de formulas e problemas específicos utilizando arquivos CSV (Excel).
     `,
   },
   {
