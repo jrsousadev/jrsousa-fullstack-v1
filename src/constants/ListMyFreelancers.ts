@@ -7,6 +7,7 @@ import LogoOgDevelopment from "../../public/assets/logo-og.png";
 import LogoBacklife from "../../public/assets/logo-backlife.png";
 import LogoRastreioSimples from "../../public/assets/logo-rastreio-simples.png";
 import LogoEugenioCabral from "../../public/assets/logo-eugeniocabral.png";
+import LogoJdsIphones from "../../public/assets/logo-jdsiphones.png";
 
 import { StaticImageData } from "next/image";
 
@@ -21,6 +22,18 @@ export type FreelancersProps = {
 };
 
 export const myFreelancers: FreelancersProps[] = [
+  {
+    name: "JDS iPhones",
+    slogan: "Sistema de Estoque",
+    /* link: "https://rastreio-simples.vercel.app/", */
+    image: LogoJdsIphones,
+    imageWidth: 300,
+    imageHeight: 300,
+    description: `
+      Sistema de estoque, desenvolvido com um painel administrativo para controle de iPhones e também
+      onde é possível o usuário entrar na página e visualizar todos os iPhones disponíveis.
+    `,
+  },
   {
     name: "Rastreio Simples",
     slogan: "Automação",
