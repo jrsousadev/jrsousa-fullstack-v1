@@ -6,6 +6,7 @@ import LogoMines from "../../public/assets/logo-mines.png";
 import LogoOgDevelopment from "../../public/assets/logo-og.png";
 import LogoBacklife from "../../public/assets/logo-backlife.png";
 import LogoRastreioSimples from "../../public/assets/logo-rastreio-simples.png";
+import LogoEugenioCabral from "../../public/assets/logo-eugeniocabral.png";
 
 import { StaticImageData } from "next/image";
 
@@ -23,7 +24,7 @@ export const myFreelancers: FreelancersProps[] = [
   {
     name: "Rastreio Simples",
     slogan: "Automação",
-    link: "https://rastreio-simples.vercel.app/",
+    /* link: "https://rastreio-simples.vercel.app/", */
     image: LogoRastreioSimples,
     imageWidth: 250,
     imageHeight: 200,
@@ -33,9 +34,20 @@ export const myFreelancers: FreelancersProps[] = [
     `,
   },
   {
+    name: "Dr. Eugênio Cabral",
+    slogan: "Landing Page",
+    link: "https://dreugeniocabral.com.br/",
+    image: LogoEugenioCabral,
+    imageWidth: 300,
+    imageHeight: 50,
+    description: `
+      Criação da Landing Page do Dr. Eugênio Cabral, aplicando SEO e automação de imagens.
+    `,
+  },
+  {
     name: "Degeocollege",
     slogan: "Plataforma de curso",
-    link: "https://degeocollege.degeoacademy.xyz/",
+    link: "https://degeocollege.degeoacademy.xyz/login",
     image: LogoDegeo,
     imageWidth: 150,
     imageHeight: 110,
@@ -45,9 +57,9 @@ export const myFreelancers: FreelancersProps[] = [
     `,
   },
   {
-    name: "OG Development",
+    name: "Agência OG",
     slogan: "Landing Page",
-    /* link: "", */
+    link: "https://agencia-og.vercel.app/",
     image: LogoOgDevelopment,
     imageWidth: 200,
     imageHeight: 200,
@@ -59,7 +71,7 @@ export const myFreelancers: FreelancersProps[] = [
   {
     name: "Backlife",
     slogan: "Landing Page",
-    link: "https://vejaissourgente.online/bklife-desconto50/",
+    /* link: "https://vejaissourgente.online/bklife-desconto50/", */
     image: LogoBacklife,
     imageWidth: 150,
     imageHeight: 70,

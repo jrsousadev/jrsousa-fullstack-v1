@@ -27,7 +27,7 @@ export const myJobs: JobProps[] = [
     imageHeight: 110,
     period: "Oct 2022 - Present",
     description: `
-      Responsável pelo desenvolvimento do sistema cujo objetivo é desenvolver nossas features de acordo
+      Responsável pelo desenvolvimento do sistema cujo objetivo é desenvolver novas features de acordo
       com a necessidade do cliente, correção de bugs e automação de processos hospitalares e também gerenciamento
       e monitoramento de novos desenvolvedores.
     `,
@@ -48,7 +48,7 @@ export const myJobs: JobProps[] = [
     name: "BotCheckin",
     slogan: "Saas",
     link: "https://conheca-bot-checkin.vercel.app/",
-    period: "Dec 2022 - Mai 2023",
+    period: "Dec 2022 - Paused",
     image: LogoBotCheckin,
     imageWidth: 110,
     imageHeight: 110,
