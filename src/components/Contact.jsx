@@ -1,55 +1,54 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
+
+    const params = {
+      from_name: senderName,
+      from_email: senderEmail,
+      to_name: "Junior Sousa",
+      subject,
+      message,
+    };
+
+    try {
+      emailjs.send(
         "service_w1w8ofr",
-        "service_w1w8ofr",
-        form.current,
-        "bxV0De4d8tH_-su2F1VDy"
-      )
-      .then(
-        (result) => {
-          console.log(result)
-          toast.success("Mensagem enviada com sucesso!", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          document.getElementById("myForm").reset();
-        },
-        (error) => {
-          toast.error("Ops, mensagem não enviada!", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-        }
+        "template_boe97ai",
+        params,
+        "w7AYOhE1mrlEgtp7k",
       );
+      toast.success("Mensagem enviada com sucesso!");
+    } catch (err) {
+      console.log(err);
+      toast.error(err)
+      toast.error("Houve um erro ao tentar enviar a mensagem");
+    }
   };
 
   return (
     <>
-      <form id="myForm" className="contactform" ref={form} onSubmit={sendEmail}>
+      <form id="myForm" className="contactform" onSubmit={sendEmail}>
         <div className="row">
           <div className="col-12 col-md-6">
             <div className="form-group">
-              <input type="text" name="name" placeholder="Seu nome" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Seu nome"
+                required
+                onChange={(e) => setSenderName(e.target.value)}
+              />
             </div>
           </div>
 
@@ -60,6 +59,7 @@ const Contact = () => {
                 name="user_email"
                 placeholder="Seu e-mail"
                 required
+                onChange={(e) => setSenderEmail(e.target.value)}
               />
             </div>
           </div>
@@ -71,6 +71,7 @@ const Contact = () => {
                 name="subject"
                 placeholder="Seu assunto"
                 required
+                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
           </div>
@@ -81,13 +82,16 @@ const Contact = () => {
                 name="message"
                 placeholder="Sua mensagem"
                 required
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
           </div>
 
           <div className="col-12">
-            <button type="submit" className="button">
-              <span className="button-text">Enviar mensagem</span>
+            <button type="submit" className="button" disabled={loading}>
+              <span className="button-text">
+                {loading ? "Enviando..." : "Enviar mensagem"}
+              </span>
               <span className="button-icon fa fa-send"></span>
             </button>
           </div>
