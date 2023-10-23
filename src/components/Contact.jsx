@@ -26,12 +26,18 @@ const Contact = () => {
         "service_w1w8ofr",
         "template_boe97ai",
         params,
-        "w7AYOhE1mrlEgtp7k",
+        "w7AYOhE1mrlEgtp7k"
       );
+
+      window.open(
+        "https://api.whatsapp.com/send?phone=5579999648729&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20site,%20gostaria%20de%20entrar%20em%20contato.",
+        "_blank"
+      );
+
       toast.success("Mensagem enviada com sucesso!");
     } catch (err) {
       console.log(err);
-      toast.error(err)
+      toast.error(err);
       toast.error("Houve um erro ao tentar enviar a mensagem");
     }
   };
