@@ -167,7 +167,7 @@ $mbl-small: 23.75em; //380px / 16px = 23.75em
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
+        cursor: none;
         @media screen and (max-width: 575px) {
             width: 30px;
             height: 30px;

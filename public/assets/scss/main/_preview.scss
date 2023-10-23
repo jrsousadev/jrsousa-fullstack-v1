@@ -63,7 +63,7 @@ body {
   margin: 0 auto;
   border-radius: 6px;
   max-width: 150px;
-  cursor: pointer !important;
+  cursor: none !important;
   padding: 3px 20px;
 }
 .demo .btn:hover {
@@ -127,7 +127,7 @@ h2 {
   }
 }
 .footer_copyright a {
-  cursor: pointer !important;
+  cursor: none !important;
 }
 .bg_container {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -141,7 +141,7 @@ h2 {
   }
   a {
     display: block;
-    cursor: pointer !important;
+    cursor: none !important;
   }
 }
 .demo .content:hover .bg_container {

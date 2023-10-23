@@ -21,7 +21,7 @@
             transition: all 0.4s;
             border: none;
             outline: none;
-            cursor: pointer;
+            cursor: none;
             text-decoration: none;
             list-style: none;
         }
@@ -60,7 +60,7 @@
             width: 100%;
             height: 229px;
             position: relative;
-            cursor: pointer;
+            cursor: none;
             display: flex;
 
             img {

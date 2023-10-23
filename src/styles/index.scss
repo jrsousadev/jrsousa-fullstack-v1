@@ -1,3 +1,7 @@
 @import "aos/dist/aos.css";
 @import "../../public/assets/fonts/font-awesome/css/font-awesome.min.css";
 @import '../../public/assets/scss/main.scss';
+
+body, button, div, a {
+    cursor: none !important;
+}

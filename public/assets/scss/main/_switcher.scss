@@ -1,6 +1,6 @@
 // switcherr
 .theme-switcher-label {
-    cursor: pointer;
+    cursor: none;
     position: fixed;
     right: 30px;
     top: 30px;
@@ -67,6 +67,6 @@
         opacity: 0;
     }
     input {
-        cursor: pointer;
+        cursor: none;
     }
 }

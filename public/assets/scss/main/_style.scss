@@ -92,7 +92,7 @@ hr.separator {
 }
 a,
 button {
-  cursor: pointer !important;
+  cursor: none !important;
 }
 .no-transform {
   transform: none !important;
@@ -387,7 +387,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   white-space: nowrap;
   text-overflow: ellipsis;
   text-align: center;
-  cursor: pointer;
+  cursor: none;
   vertical-align: middle;
   user-select: none;
   transition: 250ms all ease-in-out;
@@ -401,7 +401,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   color: #fff;
   background-color: transparent;
   outline: none !important;
-  cursor: pointer !important;
+  cursor: none !important;
 }
 
 .button .button-text {
@@ -563,7 +563,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   margin: 20px 0;
   border-radius: 50%;
   background: #2b2a2a;
-  cursor: pointer;
+  cursor: none;
 }
 .header ul.icon-menu li.icon-box,
 .portfolio-tab-list li {
@@ -900,7 +900,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 .portfolio .grid li {
   width: 33.333333%;
   float: left;
-  cursor: pointer;
+  cursor: none;
   padding: 15px;
 }
 
@@ -1042,7 +1042,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
   position: fixed;
   z-index: 1000;
   text-align: center;
-  cursor: pointer;
+  cursor: none;
   padding: 200px 30px;
   color: #fff;
 }
@@ -1104,7 +1104,7 @@ body.light .header ul.icon-menu li.icon-box:hover i {
 .contact .custom-span-contact a {
   color: #fff;
   text-decoration: none;
-  cursor: pointer !important;
+  cursor: none !important;
 }
 body.light .contact .custom-span-contact a {
   color: #666;
@@ -1216,7 +1216,7 @@ body.light .contact .custom-span-contact a {
 
 .blog .post-container {
   display: block;
-  cursor: pointer;
+  cursor: none;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -1229,7 +1229,7 @@ body.light .contact .custom-span-contact a {
 
 .blog .post-content .entry-header h3 {
   line-height: 26px;
-  cursor: pointer;
+  cursor: none;
 }
 
 .blog .post-content .entry-header h3 a {
@@ -1239,7 +1239,7 @@ body.light .contact .custom-span-contact a {
 
 .blog .post-thumb {
   border-radius: 5px 5px 0 0;
-  cursor: pointer;
+  cursor: none;
   @media screen and (min-width: 1300px) {
     background: #555;
     min-height: 227px;
@@ -1452,7 +1452,7 @@ body.light .contact .custom-span-contact a {
     width: 54px;
     height: 54px;
     position: absolute;
-    cursor: pointer;
+    cursor: none;
     opacity: 0;
     z-index: 2;
     top: 0;
@@ -1991,7 +1991,7 @@ button:focus {
     margin: 15px;
     margin-top: 0;
     font-size: 16px;
-    cursor: pointer;
+    cursor: none;
     transition: 0.3s;
     &:hover,
     &.react-tabs__tab--selected {
@@ -2086,7 +2086,7 @@ button:focus {
     justify-content: center;
     font-size: 30px;
     padding: 10px;
-    cursor: pointer !important;
+    cursor: none !important;
     text-decoration: none;
   }
 }
