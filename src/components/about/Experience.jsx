@@ -2,7 +2,20 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "Jul 2023 - Present",
+    year: "Oct 2023 - Present",
+    position: "Fullstack Engineer Pleno",
+    compnayName: "Porão dos Quadros",
+    details: `
+    Responsável pela criação do sistema interno da Porão dos Quadros, manutenção no ecommerce, automações de operações e integrações.
+    <br/> <br/>
+    - Automatizar processos com tecnologia evitando gastos de tempo desnecessários em operação manual <br/>
+    - Integração com plataformas de pagamento, correios e CMS. <br/>
+    - Desenvolvimento de backoffice <br/>
+    - Integração e gerenciamento de novos programadores
+    `,
+  },
+  {
+    year: "Jul 2023 - Nov 2023",
     position: "Fullstack Engineer Pleno",
     compnayName: "Capsul Brasil",
     details: `

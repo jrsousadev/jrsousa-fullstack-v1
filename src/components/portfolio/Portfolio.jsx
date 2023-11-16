@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PortfolioData from "./portfolioData";
+import Image from "next/image";
 import ModalMain from "./modal/ModalMain";
 
 const Portfolio = () => {
@@ -38,7 +39,7 @@ const Portfolio = () => {
                           className="tab-content"
                           onClick={() => handleModal(id)}
                         >
-                          <img src={image} alt="portfolio project demo" />
+                          <Image src={image} alt="portfolio project demo" width={300} height={300} />
                           <h3>
                             <span className="conent-title">{type}</span>
                           </h3>
