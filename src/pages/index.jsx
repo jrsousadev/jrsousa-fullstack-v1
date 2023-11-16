@@ -41,7 +41,7 @@ const Home = () => {
             </TabList>
           </div>
           <div className="tab-panel_list">
-            <TabPanel className="home ">
+            <TabPanel className="home">
               <div
                 className="container-fluid main-container container-home p-0 g-0"
                 data-aos="fade-up"

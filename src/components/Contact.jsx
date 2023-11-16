@@ -36,8 +36,6 @@ const Contact = () => {
 
       toast.success("Mensagem enviada com sucesso!");
     } catch (err) {
-      console.log(err);
-      toast.error(err);
       toast.error("Houve um erro ao tentar enviar a mensagem");
     }
   };

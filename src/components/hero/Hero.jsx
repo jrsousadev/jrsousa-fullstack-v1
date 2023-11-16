@@ -22,17 +22,17 @@ const Hero = () => {
   return (
     <>
       <div className="row home-details-container align-items-center">
-        <div
+        {/* <div
           className="col-lg-4 bg position-fixed d-none d-lg-block"
           style={{
             backgroundImage: `url(${heroContent.heroImage})`,
             backgroundPosition: "right",
             backgroundSize: "cover",
           }}
-        ></div>
-        <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
+        ></div> */}
+        <div className="col-12 col-lg-5 offset-lg-4 home-details  text-center text-lg-start">
           <div>
-            <div
+            {/* <div
               style={{
                 backgroundImage: `url(${heroContent.heroMobileImage})`,
                 backgroundSize: "cover",
@@ -41,7 +41,7 @@ const Hero = () => {
                 borderRadius: "50%",
               }}
               className="img-fluid main-img-mobile d-sm-block d-lg-none"
-            />
+            /> */}
             <h1 className="text-uppercase poppins-font">
               {heroContent.heroTitleName}.
               <span>{heroContent.heroDesignation}</span>
