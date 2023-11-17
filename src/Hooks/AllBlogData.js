@@ -1,110 +1,35 @@
 import { useState } from "react";
 import img1 from "../../public/assets/img/blog/blog-post-1.jpg";
-import img2 from "../../public/assets/img/blog/blog-post-2.jpg";
-import img3 from "../../public/assets/img/blog/blog-post-3.jpg";
-import img4 from "../../public/assets/img/blog/blog-post-4.jpg";
-import img5 from "../../public/assets/img/blog/blog-post-5.jpg";
-import img6 from "../../public/assets/img/blog/blog-post-6.jpg";
 
 const AllBlogData = () => {
   const blogsData = [
     {
       id: 1,
       img: img1,
-      title: "How to Own Your Audience by Creating an Email List",
-      commentor: "Rio ",
-      date: "21 April 2022",
-      tag: `wordpress, business, economy, design`,
-      description1:
-        "Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack bonnet arse over tit burke bugger all mate bodge. cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas.",
-      description2:
-        "Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights. ",
-      description3:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      description4:
-        "Riosum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "Top 10 Toolkits for Deep Learning in 2022",
-      commentor: "Santhan ",
-      date: "14 January 2022",
-      tag: `wordpress, business, economy, design`,
-      description1:
-        "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      description2:
-        "If you’ve been waiting for an invitation, this calligraphy is it. Commissioned by Notebook hand-lettered design for a poster. Quote is Notebook Building 8 VP’s Regina Dugan—and mine. ",
-      description3:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      description4:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      id: 3,
-      img: img3,
-      title: "Everything You Need to Know About Web Accessibility",
-      commentor: "steve ",
-      date: "9 January 2020",
-      tag: `wordpress, business, economy, design`,
-      description1:
-        "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      description2:
-        "Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights. ",
-      description3:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      description4:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      id: 4,
-      img: img4,
-      title: "How to Inject Humor & Comedy Into Your Brand",
-      commentor: "Beker ",
-      date: "15 March 2022",
-      tag: `wordpress, business, economy, design`,
-      description1:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Suspendisse interdum consectetur libero id faucibu nisl. Lacus vel facilisis volutpat est velit egestas",
-      description2:
-        "Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights. ",
-      description3:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      description4:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      id: 5,
-      img: img5,
-      title: "Women in Web Design: How To Achieve Success",
-      commentor: "Janntul ",
-      date: "9 January 2021",
-      tag: `wordpress, business, economy, design`,
-      description1:
-        "Jorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      description2:
-        "Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights. ",
-      description3:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      description4:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      id: 6,
-      img: img6,
-      title: "Evergreen versus topical content: An overview",
-      commentor: "Hasan ",
-      date: "9 January 2022",
-      tag: `wordpress, business, economy, design`,
-      description1:
-        "Still ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      description2:
-        "Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights. ",
-      description3:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      description4:
-        "Still ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
+      title: "Maximizando a Eficiência no Desenvolvimento Full-Stack: A Sinergia entre NextJS e TRPC",
+      commentor: "Carlos",
+      date: "25 Novembro 2023",
+      tag: "NextJS, TRPC, Full-Stack, Web Development",
+      descriptions: [
+        "A integração de NextJS e TRPC está transformando o cenário do desenvolvimento full-stack, oferecendo uma solução eficiente e elegante para a construção de aplicações web modernas. NextJS, com sua arquitetura híbrida, facilita o desenvolvimento de páginas renderizadas no servidor (SSR) e estáticas (SSG), enquanto TRPC permite a criação de APIs tipo-safe sem a necessidade de definir schemas ou gerar clientes.",
+        "A união dessas tecnologias oferece um fluxo de trabalho otimizado, permitindo aos desenvolvedores focar na lógica do negócio ao invés de se preocuparem com a verbosidade e complexidade da criação de APIs REST ou GraphQL. Com TRPC, a comunicação entre o frontend e o backend torna-se mais fluída, eliminando muitos dos desafios comuns na tipagem de dados e validação.",
+        `<pre><code>// Integração TRPC com NextJS
+    import { createRouter } from 'trpc/server';
+    import { appRouter } from './routers/_app';
+    
+    const trpcRouter = createRouter()
+      .merge('app.', appRouter);
+    
+    export default trpcRouter;
+    </code></pre>`,
+        "Esta combinação também impulsiona a performance e a segurança das aplicações. NextJS oferece otimizações automáticas e uma vasta gama de plugins, enquanto TRPC garante a segurança tipo-safe em tempo de compilação, reduzindo os erros em runtime e aumentando a confiabilidade do código.",
+        "Além disso, a integração de TRPC com NextJS abre portas para padrões arquiteturais mais avançados, como microservices e serverless, simplificando a adoção desses paradigmas em projetos de diferentes escalas. A capacidade de desenvolver APIs rápidas e eficientes com TRPC, juntamente com a flexibilidade e poder de NextJS, cria um ecossistema propício para inovação e eficiência no desenvolvimento web.",
+        "Concluindo, a combinação de NextJS e TRPC representa um marco no desenvolvimento full-stack, oferecendo uma abordagem moderna, escalável e eficiente, perfeitamente alinhada com as demandas de projetos web atuais e futuros."
+      ],
+      quoteIndices: [1, 4],
+    }
   ];
+
 
   const [singleData, setSingleData] = useState({});
   const [isOpen, setIsOpen] = useState(false);

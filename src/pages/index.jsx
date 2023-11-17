@@ -8,7 +8,7 @@ import Portfolio from "../components/portfolio/Portfolio";
 import Address from "../components/Address";
 import Social from "../components/Social";
 import Contact from "../components/Contact";
-/* import Blog from "../components/blog/Blog"; */
+import Blog from "../components/blog/Blog";
 import SwitchDark from "../components/switch/SwitchDark";
 
 const menuItem = [
@@ -16,7 +16,7 @@ const menuItem = [
   { icon: "fa-user", menuName: "Sobre" },
   { icon: "fa-briefcase", menuName: "Portfolio" },
   { icon: "fa-envelope-open", menuName: "Contato" },
-/*   { icon: "fa-comments", menuName: "Blog" }, */
+  { icon: "fa-comments", menuName: "Blog" },
 ];
 
 const Home = () => {
@@ -111,16 +111,16 @@ const Home = () => {
                 </div>
               </div>
             </TabPanel>
-           {/*  <TabPanel className="blog">
+            <TabPanel className="blog">
               <div
                 className="title-section text-start text-sm-center "
                 data-aos="fade-up"
                 data-aos-duration="1200"
               >
                 <h1>
-                  my <span>blog</span>
+                  meu <span>blog</span>
                 </h1>
-                <span className="title-bg">posts</span>
+                <span className="title-bg">Conteúdos</span>
               </div>
               <div
                 className="container"
@@ -131,7 +131,7 @@ const Home = () => {
                   <Blog />
                 </div>
               </div>
-            </TabPanel> */}
+            </TabPanel>
           </div>
         </Tabs>
       </div>

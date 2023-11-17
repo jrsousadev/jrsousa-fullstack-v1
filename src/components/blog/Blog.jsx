@@ -5,15 +5,15 @@ import blogQuote from "../../../public/assets/img/blog/quote.svg";
 import UseData from "../../Hooks/UseData";
 import Image from "next/image";
 
-
 const Blog = () => {
-  const { singleData, isOpen, setIsOpen, blogsData, handleBlogsData } = UseData();
+  const { singleData, isOpen, setIsOpen, blogsData, handleBlogsData } =
+    UseData();
   const handleModle = (id) => {
     handleBlogsData(id);
   };
   useEffect(() => {
     Modal.setAppElement("#modal");
-  },[])
+  }, []);
   return (
     <>
       <div className="row" id="modal">
@@ -28,7 +28,12 @@ const Blog = () => {
             >
               <div className="post-thumb">
                 <div className="d-block position-relative overflow-hidden">
-                  <Image src={item?.img} className="img-fluid" alt="item.title" />z
+                  <Image
+                    src={item?.img}
+                    className="img-fluid"
+                    alt="item.title"
+                  />
+                  z
                 </div>
               </div>
               {/* End .thumb */}
@@ -37,7 +42,7 @@ const Blog = () => {
                   <h3>{item?.title}</h3>
                 </div>
                 <div className="entry-content open-sans-font">
-                  <p>{item?.description1.slice(0, 100)}</p>
+                  <p>{item?.description1?.slice(0, 100)}</p>
                 </div>
               </div>
               {/* End .post-content */}
@@ -93,19 +98,24 @@ const Blog = () => {
                       alt="Blog"
                     />
                     <div className="blog-excerpt open-sans-font pb-5">
-                      <p>{singleData?.description1}</p>
-                      <div className="quotebox">
-                        <div className="icon">
-                          <Image src={blogQuote} alt="blog quote" />
-                        </div>
-                        <p>{singleData?.description2}</p>
-                      </div>
-                      <p>{singleData?.description3}</p>
-                      <p>{singleData?.description4}</p>
+                      {singleData?.descriptions?.map((description, index) =>
+                        singleData?.quoteIndices?.includes(index) ? (
+                          <div className="quotebox">
+                            <div className="icon">
+                              <Image src={blogQuote} alt="blog quote" />
+                            </div>
+                            <p
+                              dangerouslySetInnerHTML={{ __html: description }}
+                            ></p>
+                          </div>
+                        ) : (
+                          <p
+                            dangerouslySetInnerHTML={{ __html: description }}
+                          ></p>
+                        )
+                      )}
                     </div>
-                    {/* Article Content Ends */}
                   </article>
-                  {/* Article Ends */}
                 </div>
               </div>
             </Modal>
